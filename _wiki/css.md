@@ -6,6 +6,9 @@ description: 收集CSS资料。
 keywords: CSS
 ---
 
+## flex布局
+- <http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html>
+
 #### tips
 - [A Space Between Inline-block list items](http://stackoverflow.com/questions/5256533/a-space-between-inline-block-list-items)
 

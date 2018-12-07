@@ -28,3 +28,7 @@ keywords: web
 
 ### cmd
 - rsync -av --exclude data/a --exclude data/b --exclude data/c data /bak
+
+### beyond compare
+此破解方法是无限永久试用方法：
+rm "/Users/$(whoami)/Library/Application Support/Beyond Compare/registry.dat"
