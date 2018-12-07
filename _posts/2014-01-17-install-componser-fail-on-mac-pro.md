@@ -5,7 +5,9 @@ categories: php
 description: mac pro 安装 composer 失败
 keywords: php, composer
 ---
+
 <http://getcomposer.org/doc/00-intro.md#using-composer>
+
 
 ```shell
 $ brew install josegonzalez/php/composer
@@ -20,7 +22,7 @@ composer: Missing PHP53, PHP54 or PHP55 from homebrew-php. Please install one of
 composer安装提示：
 ```shell
 Note: If you receive an error saying PHP53 or higher is missing use this command to install php brew install php53-intl
-```shell
+```
 
 执行$ brew install php54-intl 提示：
 
