@@ -1,0 +1,14 @@
+---
+layout: wiki
+title: frontend
+categories: Web
+description: 收集前端开发资料。
+keywords: frontend, 前端
+---
+
+### interview
+- [about front end interview](https://mdluo.github.io/blog/about-front-end-interview/)
+- [关于前端面试](https://mdluo.github.io/blog/about-front-end-interview/)
+
+### live reload
+- [修改文件后浏览器自动刷新解决方案](https://segmentfault.com/a/1190000003709651)

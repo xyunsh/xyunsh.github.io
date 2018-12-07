@@ -34,6 +34,67 @@ keywords: Git, 版本控制
 
 ## Q&A
 
+
+### [如何高效利用GitHub](http://www.yangzhiping.com/tech/github.html)
+
+### gitlib
+- [GitLab 安装笔记](https://www.nichijou.com/p/6sh26/)
+
+### git command
+- git获取远程分支
+
+> 运行 git fetch，可以将远程分支信息获取到本地，再运行 git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支。
+
+- 如果要放弃本地修改后更新：
+> git reset --hard
+git pull
+
+### [Git偏好设定](https://ihower.tw/blog/archives/5436)
+#### 1. 让command line显示git branch分支
+修改 ~/.bash_profile
+
+    function git_branch {
+        ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
+        echo "("${ref#refs/heads/}") ";
+    }
+
+    function git_since_last_commit {
+        now=`date +%s`;
+        last_commit=$(git log --pretty=format:%at -1 2> /dev/null) || return;
+        seconds_since_last_commit=$((now-last_commit));
+        minutes_since_last_commit=$((seconds_since_last_commit/60));
+        hours_since_last_commit=$((minutes_since_last_commit/60));
+        minutes_since_last_commit=$((minutes_since_last_commit%60));
+
+        echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
+    }
+
+    PS1="[\[\033[1;32m\]\w\[\033[0m] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ "
+
+#### 2. 安装git Bash autocompletion，这样可以tab补全
+
+    brew install bash-completion
+    cp /usr/local/etc/bash_completion.d/git-completion.bash ~/.git-bash-completion.sh
+
+编辑~/.bash_profile 加入
+
+    [ -f ~/.git-bash-completion.sh ] && . ~/.git-bash-completion.sh
+
+#### 3. 打开git color设定
+    git config --global color.ui true
+
+#### 4. 设置diff merge工具
+    git config --global core.editor
+    git config --global merge.tool opendiff
+
+#### 5. 设置alias
+    git config --global alias.co checkout
+    git config --global alias.ci commit
+    git config --global alias.st status
+    git config --global alias.br branch
+
+文档在 ~/.gitconfig
+
 ### 如何解决gitk中文乱码，git ls-files 中文文件名乱码问题？
 
 在~/.gitconfig中添加如下内容

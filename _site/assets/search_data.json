@@ -73,24 +73,10 @@
     } ,
   
     {
-      "title"    : "Android Studio",
-      "category" : "Android",
+      "title"    : "Android",
+      "category" : "App",
       
-      "url"      : "https://xyunsh.github.io/wiki/android-studio/"
-    } ,
-  
-    {
-      "title"    : "Axure",
-      "category" : "tools",
-      
-      "url"      : "https://xyunsh.github.io/wiki/axure/"
-    } ,
-  
-    {
-      "title"    : "Badminton",
-      "category" : "Hobbies",
-      
-      "url"      : "https://xyunsh.github.io/wiki/badminton/"
+      "url"      : "https://xyunsh.github.io/wiki/android/"
     } ,
   
     {
@@ -101,17 +87,24 @@
     } ,
   
     {
-      "title"    : "Eclipse",
-      "category" : "Eclipse",
+      "title"    : "CSS",
+      "category" : "Web",
       
-      "url"      : "https://xyunsh.github.io/wiki/eclipse/"
+      "url"      : "https://xyunsh.github.io/wiki/css/"
     } ,
   
     {
-      "title"    : "Emacs",
-      "category" : "Emacs",
+      "title"    : "express",
+      "category" : "Web",
       
-      "url"      : "https://xyunsh.github.io/wiki/emacs/"
+      "url"      : "https://xyunsh.github.io/wiki/express/"
+    } ,
+  
+    {
+      "title"    : "frontend",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/wiki/frontend/"
     } ,
   
     {
@@ -122,24 +115,17 @@
     } ,
   
     {
-      "title"    : "善用佳软",
-      "category" : "Recommends",
+      "title"    : "iOS",
+      "category" : "app",
       
-      "url"      : "https://xyunsh.github.io/wiki/good-soft/"
+      "url"      : "https://xyunsh.github.io/wiki/ios/"
     } ,
   
     {
-      "title"    : "IDA Pro",
-      "category" : "Debug",
+      "title"    : "Javascript",
+      "category" : "Web",
       
-      "url"      : "https://xyunsh.github.io/wiki/ida-pro/"
-    } ,
-  
-    {
-      "title"    : "IntelliJ IDEA",
-      "category" : "Tools",
-      
-      "url"      : "https://xyunsh.github.io/wiki/intellij-idea/"
+      "url"      : "https://xyunsh.github.io/wiki/javascript/"
     } ,
   
     {
@@ -164,17 +150,10 @@
     } ,
   
     {
-      "title"    : "MPV",
-      "category" : "Tools",
+      "title"    : "微信小程序",
+      "category" : "App",
       
-      "url"      : "https://xyunsh.github.io/wiki/mpv/"
-    } ,
-  
-    {
-      "title"    : "OllyDbg",
-      "category" : "debug",
-      
-      "url"      : "https://xyunsh.github.io/wiki/ollydbg/"
+      "url"      : "https://xyunsh.github.io/wiki/mini-program/"
     } ,
   
     {
@@ -185,17 +164,17 @@
     } ,
   
     {
+      "title"    : "杂七杂八",
+      "category" : "Tools",
+      
+      "url"      : "https://xyunsh.github.io/wiki/others/"
+    } ,
+  
+    {
       "title"    : "PHP",
       "category" : "php",
       
       "url"      : "https://xyunsh.github.io/wiki/php/"
-    } ,
-  
-    {
-      "title"    : "PowerShell",
-      "category" : "Windows",
-      
-      "url"      : "https://xyunsh.github.io/wiki/powershell/"
     } ,
   
     {
@@ -206,24 +185,31 @@
     } ,
   
     {
-      "title"    : "Qt Creator",
-      "category" : "Qt",
+      "title"    : "React Native",
+      "category" : "App",
       
-      "url"      : "https://xyunsh.github.io/wiki/qt-creator/"
+      "url"      : "https://xyunsh.github.io/wiki/react-native/"
     } ,
   
     {
-      "title"    : "Source Insight",
+      "title"    : "React",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/wiki/react/"
+    } ,
+  
+    {
+      "title"    : "rxjs",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/wiki/rx/"
+    } ,
+  
+    {
+      "title"    : "sublime3",
       "category" : "Tools",
       
-      "url"      : "https://xyunsh.github.io/wiki/source-insight/"
-    } ,
-  
-    {
-      "title"    : "Swimming",
-      "category" : "Hobbies",
-      
-      "url"      : "https://xyunsh.github.io/wiki/swimming/"
+      "url"      : "https://xyunsh.github.io/wiki/sublime3/"
     } ,
   
     {
@@ -241,13 +227,6 @@
     } ,
   
     {
-      "title"    : "Visio",
-      "category" : "Tools",
-      
-      "url"      : "https://xyunsh.github.io/wiki/visio/"
-    } ,
-  
-    {
       "title"    : "Visual Studio Code",
       "category" : "Tools",
       
@@ -259,6 +238,13 @@
       "category" : "Tools",
       
       "url"      : "https://xyunsh.github.io/wiki/visual-studio/"
+    } ,
+  
+    {
+      "title"    : "Web Tools",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/wiki/webtools/"
     } 
   
 ]

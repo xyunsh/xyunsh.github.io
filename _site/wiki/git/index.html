@@ -189,6 +189,83 @@
 
 <h2 id="qa">Q&amp;A</h2>
 
+<h3 id="如何高效利用github"><a href="http://www.yangzhiping.com/tech/github.html">如何高效利用GitHub</a></h3>
+
+<h3 id="gitlib">gitlib</h3>
+<ul>
+  <li><a href="https://www.nichijou.com/p/6sh26/">GitLab 安装笔记</a></li>
+</ul>
+
+<h3 id="git-command">git command</h3>
+<ul>
+  <li>git获取远程分支</li>
+</ul>
+
+<blockquote>
+  <p>运行 git fetch，可以将远程分支信息获取到本地，再运行 git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支。</p>
+</blockquote>
+
+<ul>
+  <li>如果要放弃本地修改后更新：
+    <blockquote>
+      <p>git reset –hard
+git pull</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="git偏好设定"><a href="https://ihower.tw/blog/archives/5436">Git偏好设定</a></h3>
+<h4 id="1-让command-line显示git-branch分支">1. 让command line显示git branch分支</h4>
+<p>修改 ~/.bash_profile</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function git_branch {
+    ref=$(git symbolic-ref HEAD 2&gt; /dev/null) || return;
+    echo "("${ref#refs/heads/}") ";
+}
+
+function git_since_last_commit {
+    now=`date +%s`;
+    last_commit=$(git log --pretty=format:%at -1 2&gt; /dev/null) || return;
+    seconds_since_last_commit=$((now-last_commit));
+    minutes_since_last_commit=$((seconds_since_last_commit/60));
+    hours_since_last_commit=$((minutes_since_last_commit/60));
+    minutes_since_last_commit=$((minutes_since_last_commit%60));
+
+    echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
+}
+
+PS1="[\[\033[1;32m\]\w\[\033[0m] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ "
+</code></pre></div></div>
+
+<h4 id="2-安装git-bash-autocompletion这样可以tab补全">2. 安装git Bash autocompletion，这样可以tab补全</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install bash-completion
+cp /usr/local/etc/bash_completion.d/git-completion.bash ~/.git-bash-completion.sh
+</code></pre></div></div>
+
+<p>编辑~/.bash_profile 加入</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ -f ~/.git-bash-completion.sh ] &amp;&amp; . ~/.git-bash-completion.sh
+</code></pre></div></div>
+
+<h4 id="3-打开git-color设定">3. 打开git color设定</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global color.ui true
+</code></pre></div></div>
+
+<h4 id="4-设置diff-merge工具">4. 设置diff merge工具</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global core.editor
+git config --global merge.tool opendiff
+</code></pre></div></div>
+
+<h4 id="5-设置alias">5. 设置alias</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+</code></pre></div></div>
+
+<p>文档在 ~/.gitconfig</p>
+
 <h3 id="如何解决gitk中文乱码git-ls-files-中文文件名乱码问题">如何解决gitk中文乱码，git ls-files 中文文件名乱码问题？</h3>
 
 <p>在~/.gitconfig中添加如下内容</p>
