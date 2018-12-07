@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://xyunsh.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xyunsh.github.io/" rel="alternate" type="text/html" /><updated>2018-12-07T12:07:44+08:00</updated><id>https://xyunsh.github.io/feed.xml</id><title type="html">xyunsh</title><subtitle>萧云的个人博客</subtitle><author><name>xyunsh</name></author><entry><title type="html">mac pro 安装 composer 失败</title><link href="https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro/" rel="alternate" type="text/html" title="mac pro 安装 composer 失败" /><published>2014-01-17T00:00:00+08:00</published><updated>2014-01-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro</id><content type="html" xml:base="https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro/">&lt;p&gt;&lt;a href=&quot;http://getcomposer.org/doc/00-intro.md#using-composer&quot;&gt;http://getcomposer.org/doc/00-intro.md#using-composer&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install josegonzalez/php/composer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;出现错误：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer: Missing PHP53, PHP54 or PHP55 from homebrew-php. Please install one of them before continuing
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;composer安装提示：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Note: If you receive an error saying PHP53 or higher is missing use this &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;to install php brew install php53-intl
+&lt;span class=&quot;sb&quot;&gt;````&lt;/span&gt;shell
+
+执行&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install php54-intl 提示：
+
+&lt;span class=&quot;sb&quot;&gt;```&lt;/span&gt;shell
+Error: No available formula &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;zlib
+Please tap it and &lt;span class=&quot;k&quot;&gt;then &lt;/span&gt;try again: brew tap homebrew/dupes
+Searching taps…
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;执行$ brew tap homebrew/dupes&lt;/p&gt;
+
+&lt;p&gt;再执行：$ brew install josegonzalez/php/composer&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;a href=&quot;http://www.torounit.com/blog/category/php/&quot;&gt;http://www.torounit.com/blog/category/php/&lt;/a&gt;&lt;/p&gt;</content><author><name>xyunsh</name></author><summary type="html">http://getcomposer.org/doc/00-intro.md#using-composer</summary></entry></feed>
