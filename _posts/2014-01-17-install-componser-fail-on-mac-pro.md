@@ -20,7 +20,7 @@ composer: Missing PHP53, PHP54 or PHP55 from homebrew-php. Please install one of
 composer安装提示：
 ```shell
 Note: If you receive an error saying PHP53 or higher is missing use this command to install php brew install php53-intl
-````shell
+```shell
 
 执行$ brew install php54-intl 提示：
 
