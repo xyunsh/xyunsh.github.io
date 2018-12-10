@@ -18,14 +18,14 @@ mathjax: true
 ### 超链接
 
 ```
-[靠谱-ing](https://mazhuang.org)
+[好帅-ing](https://xyunsh.github.io)
 
-<https://mazhuang.org>
+<https://xyunsh.github.io>
 ```
 
-[靠谱-ing](https://mazhuang.org)  
+[好帅-ing](https://xyunsh.github.io)  
 
-<https://mazhuang.org>
+<https://xyunsh.github.io>
 
 ### 列表
 

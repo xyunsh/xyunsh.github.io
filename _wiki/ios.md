@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: iOS
-categories: app
+categories: App
 description: 收集iOS开发资料。
 keywords: iOS
 ---
