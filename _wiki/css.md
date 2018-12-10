@@ -11,7 +11,11 @@ keywords: CSS
 
 ## Demo
 ### 文字带颜色下划线
-<h3>文字带颜色下划线</h3>
+<style tyle="css">
+    p { color: #333 }
+    p::after { content:""; height: 2px; background-color:#eee; display: block; margin-top: 20px; border-left: solid 80px #ffc100;}
+</style>
+<p>文字带颜色下划线</p>
 
 
 ## Tips
