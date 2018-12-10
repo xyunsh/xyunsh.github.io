@@ -13,7 +13,7 @@ keywords: CSS
 ### 文字带颜色下划线
 <style tyle="css">
     p.underline { color: #333 }
-    p.underline::after { content:""; height: 2px; background-color:#eee; display: block; margin-top: 20px; border-left: solid 80px #ffc100;}
+    p.underline::after { content:""; height: 2px; background-color:#eee; display: block; margin-top: 10px; border-left: solid 80px #ffc100;}
 </style>
 ```css
 p.underline         { color: #333 }
@@ -22,7 +22,7 @@ p.underline::after  {
     height: 2px; 
     background-color:#eee; 
     display: block; 
-    margin-top: 20px; 
+    margin-top: 10px; 
     border-left: solid 80px #ffc100;
 }
 ```
