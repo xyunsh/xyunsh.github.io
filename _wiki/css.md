@@ -15,6 +15,10 @@ keywords: CSS
     p.underline { color: #333 }
     p.underline::after { content:""; height: 2px; background-color:#eee; display: block; margin-top: 20px; border-left: solid 80px #ffc100;}
 </style>
+```css
+p.underline         { color: #333 }
+p.underline::after  { content:""; height: 2px; background-color:#eee; display: block; margin-top: 20px; border-left: solid 80px #ffc100;}
+```
 <p class="underline">文字带颜色下划线</p>
 
 
