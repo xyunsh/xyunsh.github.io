@@ -10,9 +10,11 @@ keywords: CSS
 - <http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html>
 
 ## Demo
+### 文字带颜色下划线
+<h3>文字带颜色下划线</h3>
 
 
-#### tips
+## Tips
 - [A Space Between Inline-block list items](http://stackoverflow.com/questions/5256533/a-space-between-inline-block-list-items)
 
 - 字体对应
