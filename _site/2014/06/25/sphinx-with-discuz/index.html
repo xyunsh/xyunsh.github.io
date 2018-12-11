@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>sphinx with discuz &mdash; xyunsh</title>
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/components/collection.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/globals/common.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="https://xyunsh.github.io/2014/06/25/sphinx-with-discuz/">
+    <link rel="alternate" type="application/atom+xml" title="xyunsh" href="https://xyunsh.github.io/feed.xml">
+    <link rel="shortcut icon" href="https://xyunsh.github.io/favicon.ico">
+    
+    <meta property="og:title" content="sphinx with discuz">
+      
+    <meta name="keywords" content="sphinx,discuz">
+    <meta name="og:keywords" content="sphinx,discuz">
+      
+    <meta name="description" content="安装sphinx：sudo apt-get install sphinxsearch配置：">
+    <meta name="og:description" content="安装sphinx：sudo apt-get install sphinxsearch配置：">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="https://xyunsh.github.io/2014/06/25/sphinx-with-discuz/">
+    <meta property="og:site_name" content="xyunsh">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2014-06-25">
+    
+    <script src="https://xyunsh.github.io/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://xyunsh.github.io/assets/js/jquery-ui.js"></script>
+    <script src="https://xyunsh.github.io/assets/js/main.js"></script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="https://xyunsh.github.io/" title="xyunsh"><span class="octicon octicon-mark-github"></span> xyunsh</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="https://xyunsh.github.io/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="https://xyunsh.github.io/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="https://xyunsh.github.io/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="https://xyunsh.github.io/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="https://xyunsh.github.io/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="sphinx with dis">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">sphinx with discuz</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2014/06/25
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="https://xyunsh.github.io/categories/#Web" title="Web">Web</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <p>安装sphinx：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install sphinxsearch
+</code></pre></div></div>
+<p>配置：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source </span>discuz
+<span class="o">{</span>
+    <span class="nb">type</span>                    <span class="o">=</span> mysql
+
+    sql_host                <span class="o">=</span> xx.xx.xx.xx
+    sql_user                <span class="o">=</span>
+    sql_pass                <span class="o">=</span>
+    sql_db                  <span class="o">=</span> discuz
+    sql_port                <span class="o">=</span> 3306  <span class="c"># optional, default is 3306</span>
+
+<span class="o">}</span>
+
+<span class="nb">source </span>uc
+<span class="o">{</span>
+    <span class="nb">type</span>                    <span class="o">=</span> mysql
+
+    sql_host                <span class="o">=</span> xx.xx.xx.xx
+    sql_user                <span class="o">=</span>
+    sql_pass                <span class="o">=</span>
+    sql_db                  <span class="o">=</span> ucenter
+    sql_port                <span class="o">=</span> 3306  <span class="c"># optional, default is 3306</span>
+<span class="o">}</span>
+
+<span class="nb">source </span>threads : discuz
+<span class="o">{</span>
+    sql_query_pre           <span class="o">=</span> SET NAMES utf8
+    sql_query_pre           <span class="o">=</span> REPLACE INTO sph_counter SELECT 1, MAX<span class="o">(</span>tid<span class="o">)</span> FROM pre_forum_thread
+    sql_query               <span class="o">=</span> SELECT t.tid AS id,t.tid,t.fid,t.subject,t.digest,t.displayorder,t.dateline,t.lastpost,t.recommends,t.replies,t.views <span class="se">\</span>
+                                FROM pre_forum_thread AS t <span class="se">\</span>
+                                WHERE t.displayorder <span class="o">&gt;=</span> 0 AND t.tid&gt;<span class="o">=</span><span class="nv">$start</span> AND t.tid&lt;<span class="o">=</span><span class="nv">$end</span> 
+
+    sql_query_range         <span class="o">=</span> SELECT <span class="o">(</span>SELECT MIN<span class="o">(</span>tid<span class="o">)</span> FROM pre_forum_thread<span class="o">)</span>,max_doc_id FROM sph_counter WHERE counter_id <span class="o">=</span> 1
+    sql_range_step          <span class="o">=</span> 4096
+
+    sql_attr_uint           <span class="o">=</span> fid
+    sql_attr_uint           <span class="o">=</span> tid
+    sql_attr_uint           <span class="o">=</span> digest
+    sql_attr_uint           <span class="o">=</span> displayorder
+    sql_attr_timestamp      <span class="o">=</span> dateline
+    sql_attr_uint           <span class="o">=</span> recommends
+    sql_attr_uint           <span class="o">=</span> replies
+    sql_attr_timestamp      <span class="o">=</span> lastpost
+    sql_attr_uint           <span class="o">=</span> views
+
+    sql_query_info          <span class="o">=</span> SELECT <span class="k">*</span> FROM pre_forum_thread WHERE <span class="nv">tid</span><span class="o">=</span><span class="nv">$id</span>
+<span class="o">}</span>
+
+<span class="nb">source </span>threads_delta : threads
+<span class="o">{</span>
+    sql_query_pre           <span class="o">=</span> SET NAMES utf8
+    sql_query_range         <span class="o">=</span> SELECT max_doc_id + 1, <span class="o">(</span>SELECT MAX<span class="o">(</span>tid<span class="o">)</span> FROM pre_forum_thread<span class="o">)</span> FROM sph_counter WHERE counter_id <span class="o">=</span> 1
+<span class="o">}</span>
+
+index threads
+<span class="o">{</span>
+    <span class="nb">source</span>          <span class="o">=</span> threads
+    path            <span class="o">=</span> /var/lib/sphinxsearch/data/threads
+    docinfo         <span class="o">=</span> extern
+    mlock           <span class="o">=</span> 0
+    morphology      <span class="o">=</span> none
+    charset_type    <span class="o">=</span> utf-8
+    html_strip      <span class="o">=</span> 0
+    charset_table   <span class="o">=</span> U+FF10..U+FF19-&gt;0..9, 0..9, U+FF41..U+FF5A-&gt;a..z, U+FF21..U+FF3A-&gt;a..z,<span class="se">\</span>
+        A..Z-&gt;a..z, a..z, U+0149, U+017F, U+0138, U+00DF, U+00FF, U+00C0..U+00D6-&gt;U+00E0..U+00F6,<span class="se">\</span>
+        U+00E0..U+00F6, U+00D8..U+00DE-&gt;U+00F8..U+00FE, U+00F8..U+00FE, U+0100-&gt;U+0101, U+0101,<span class="se">\</span>
+        U+0102-&gt;U+0103, U+0103, U+0104-&gt;U+0105, U+0105, U+0106-&gt;U+0107, U+0107, U+0108-&gt;U+0109,<span class="se">\</span>
+        U+0109, U+010A-&gt;U+010B, U+010B, U+010C-&gt;U+010D, U+010D, U+010E-&gt;U+010F, U+010F,<span class="se">\</span>
+        U+0110-&gt;U+0111, U+0111, U+0112-&gt;U+0113, U+0113, U+0114-&gt;U+0115, U+0115, U+0116-&gt;U+0117,<span class="se">\</span>
+        U+0117, U+0118-&gt;U+0119, U+0119, U+011A-&gt;U+011B, U+011B, U+011C-&gt;U+011D, U+011D,<span class="se">\</span>
+        U+011E-&gt;U+011F, U+011F, U+0130-&gt;U+0131, U+0131, U+0132-&gt;U+0133, U+0133, U+0134-&gt;U+0135,<span class="se">\</span>
+        U+0135, U+0136-&gt;U+0137, U+0137, U+0139-&gt;U+013A, U+013A, U+013B-&gt;U+013C, U+013C,<span class="se">\</span>
+        U+013D-&gt;U+013E, U+013E, U+013F-&gt;U+0140, U+0140, U+0141-&gt;U+0142, U+0142, U+0143-&gt;U+0144,<span class="se">\</span>
+        U+0144, U+0145-&gt;U+0146, U+0146, U+0147-&gt;U+0148, U+0148, U+014A-&gt;U+014B, U+014B,<span class="se">\</span>
+        U+014C-&gt;U+014D, U+014D, U+014E-&gt;U+014F, U+014F, U+0150-&gt;U+0151, U+0151, U+0152-&gt;U+0153,<span class="se">\</span>
+        U+0153, U+0154-&gt;U+0155, U+0155, U+0156-&gt;U+0157, U+0157, U+0158-&gt;U+0159, U+0159,<span class="se">\</span>
+        U+015A-&gt;U+015B, U+015B, U+015C-&gt;U+015D, U+015D, U+015E-&gt;U+015F, U+015F, U+0160-&gt;U+0161,<span class="se">\</span>
+        U+0161, U+0162-&gt;U+0163, U+0163, U+0164-&gt;U+0165, U+0165, U+0166-&gt;U+0167, U+0167,<span class="se">\</span>
+        U+0168-&gt;U+0169, U+0169, U+016A-&gt;U+016B, U+016B, U+016C-&gt;U+016D, U+016D, U+016E-&gt;U+016F,<span class="se">\</span>
+        U+016F, U+0170-&gt;U+0171, U+0171, U+0172-&gt;U+0173, U+0173, U+0174-&gt;U+0175, U+0175,<span class="se">\</span>
+        U+0176-&gt;U+0177, U+0177, U+0178-&gt;U+00FF, U+00FF, U+0179-&gt;U+017A, U+017A, U+017B-&gt;U+017C,<span class="se">\</span>
+        U+017C, U+017D-&gt;U+017E, U+017E, U+0410..U+042F-&gt;U+0430..U+044F, U+0430..U+044F,<span class="se">\</span>
+        U+05D0..U+05EA, U+0531..U+0556-&gt;U+0561..U+0586, U+0561..U+0587, U+0621..U+063A, U+01B9,<span class="se">\</span>
+        U+01BF, U+0640..U+064A, U+0660..U+0669, U+066E, U+066F, U+0671..U+06D3, U+06F0..U+06FF,<span class="se">\</span>
+        U+0904..U+0939, U+0958..U+095F, U+0960..U+0963, U+0966..U+096F, U+097B..U+097F,<span class="se">\</span>
+        U+0985..U+09B9, U+09CE, U+09DC..U+09E3, U+09E6..U+09EF, U+0A05..U+0A39, U+0A59..U+0A5E,<span class="se">\</span>
+        U+0A66..U+0A6F, U+0A85..U+0AB9, U+0AE0..U+0AE3, U+0AE6..U+0AEF, U+0B05..U+0B39,<span class="se">\</span>
+        U+0B5C..U+0B61, U+0B66..U+0B6F, U+0B71, U+0B85..U+0BB9, U+0BE6..U+0BF2, U+0C05..U+0C39,<span class="se">\</span>
+        U+0C66..U+0C6F, U+0C85..U+0CB9, U+0CDE..U+0CE3, U+0CE6..U+0CEF, U+0D05..U+0D39, U+0D60,<span class="se">\</span>
+        U+0D61, U+0D66..U+0D6F, U+0D85..U+0DC6, U+1900..U+1938, U+1946..U+194F, U+A800..U+A805,<span class="se">\</span>
+        U+A807..U+A822, U+0386-&gt;U+03B1, U+03AC-&gt;U+03B1, U+0388-&gt;U+03B5, U+03AD-&gt;U+03B5,<span class="se">\</span>
+        U+0389-&gt;U+03B7, U+03AE-&gt;U+03B7, U+038A-&gt;U+03B9, U+0390-&gt;U+03B9, U+03AA-&gt;U+03B9,<span class="se">\</span>
+        U+03AF-&gt;U+03B9, U+03CA-&gt;U+03B9, U+038C-&gt;U+03BF, U+03CC-&gt;U+03BF, U+038E-&gt;U+03C5,<span class="se">\</span>
+        U+03AB-&gt;U+03C5, U+03B0-&gt;U+03C5, U+03CB-&gt;U+03C5, U+03CD-&gt;U+03C5, U+038F-&gt;U+03C9,<span class="se">\</span>
+        U+03CE-&gt;U+03C9, U+03C2-&gt;U+03C3, U+0391..U+03A1-&gt;U+03B1..U+03C1,<span class="se">\</span>
+        U+03A3..U+03A9-&gt;U+03C3..U+03C9, U+03B1..U+03C1, U+03C3..U+03C9, U+0E01..U+0E2E,<span class="se">\</span>
+        U+0E30..U+0E3A, U+0E40..U+0E45, U+0E47, U+0E50..U+0E59, U+A000..U+A48F, U+4E00..U+9FBF,<span class="se">\</span>
+        U+3400..U+4DBF, U+20000..U+2A6DF, U+F900..U+FAFF, U+2F800..U+2FA1F, U+2E80..U+2EFF,<span class="se">\</span>
+        U+2F00..U+2FDF, U+3100..U+312F, U+31A0..U+31BF, U+3040..U+309F, U+30A0..U+30FF,<span class="se">\</span>
+        U+31F0..U+31FF, U+AC00..U+D7AF, U+1100..U+11FF, U+3130..U+318F, U+A000..U+A48F,<span class="se">\</span>
+        U+A490..U+A4CF
+
+    <span class="c">#简单分词，只支持0和1，如果要搜索中文，请指定为1</span>
+    ngram_len       <span class="o">=</span> 1
+
+    <span class="c">#需要分词的字符，如果要搜索中文，去掉前面的注释</span>
+    ngram_chars     <span class="o">=</span> U+4E00..U+9FBF, U+3400..U+4DBF, U+20000..U+2A6DF, U+F900..U+FAFF,<span class="se">\</span>
+    U+2F800..U+2FA1F, U+2E80..U+2EFF, U+2F00..U+2FDF, U+3100..U+312F, U+31A0..U+31BF,<span class="se">\</span>
+    U+3040..U+309F, U+30A0..U+30FF, U+31F0..U+31FF, U+AC00..U+D7AF, U+1100..U+11FF,<span class="se">\</span>
+    U+3130..U+318F, U+A000..U+A48F, U+A490..U+A4CF
+    min_infix_len   <span class="o">=</span> 1
+    min_word_len    <span class="o">=</span> 1
+<span class="o">}</span>
+
+index threads_delta : threads
+<span class="o">{</span>
+    <span class="nb">source</span>          <span class="o">=</span> threads_delta
+    path            <span class="o">=</span> /var/lib/sphinxsearch/data/threads_delta
+    <span class="c">#morphology     = stem_en</span>
+<span class="o">}</span>
+
+<span class="nb">source </span>members : uc
+<span class="o">{</span>
+    sql_query_pre           <span class="o">=</span> SET NAMES utf8
+    sql_query_pre           <span class="o">=</span> REPLACE INTO sph_counter SELECT 2, MAX<span class="o">(</span>uid<span class="o">)</span> FROM uc_members
+
+    sql_query               <span class="o">=</span> SELECT m.uid AS id, m.uid, m.username FROM uc_members AS m WHERE m.uid&gt;<span class="o">=</span><span class="nv">$start</span> AND m.uid&lt;<span class="o">=</span><span class="nv">$end</span>
+
+    sql_query_range         <span class="o">=</span> SELECT <span class="o">(</span>SELECT MIN<span class="o">(</span>uid<span class="o">)</span> FROM uc_members<span class="o">)</span>,max_doc_id FROM sph_counter WHERE counter_id <span class="o">=</span> 2
+    sql_range_step          <span class="o">=</span> 4096
+
+    sql_attr_uint           <span class="o">=</span> uid
+
+    sql_query_info          <span class="o">=</span> SELECT <span class="k">*</span> FROM uc_members WHERE <span class="nv">uid</span><span class="o">=</span><span class="nv">$id</span>
+<span class="o">}</span>
+
+<span class="nb">source </span>members_delta : members
+<span class="o">{</span>
+    sql_query_pre           <span class="o">=</span> SET NAMES utf8
+    sql_query_range         <span class="o">=</span> SELECT max_doc_id + 1, <span class="o">(</span>SELECT MAX<span class="o">(</span>uid<span class="o">)</span> FROM uc_members<span class="o">)</span> FROM sph_counter WHERE counter_id <span class="o">=</span> 2
+<span class="o">}</span>
+
+index members
+<span class="o">{</span>
+    <span class="nb">source</span>          <span class="o">=</span> members
+    path            <span class="o">=</span> /var/lib/sphinxsearch/data/members
+    docinfo         <span class="o">=</span> extern
+    mlock           <span class="o">=</span> 0
+    morphology      <span class="o">=</span> none
+    charset_type    <span class="o">=</span> utf-8
+    html_strip      <span class="o">=</span> 0
+    charset_table <span class="o">=</span> U+FF10..U+FF19-&gt;0..9, 0..9, U+FF41..U+FF5A-&gt;a..z, U+FF21..U+FF3A-&gt;a..z,<span class="se">\</span>
+        A..Z-&gt;a..z, a..z, U+0149, U+017F, U+0138, U+00DF, U+00FF, U+00C0..U+00D6-&gt;U+00E0..U+00F6,<span class="se">\</span>
+        U+00E0..U+00F6, U+00D8..U+00DE-&gt;U+00F8..U+00FE, U+00F8..U+00FE, U+0100-&gt;U+0101, U+0101,<span class="se">\</span>
+        U+0102-&gt;U+0103, U+0103, U+0104-&gt;U+0105, U+0105, U+0106-&gt;U+0107, U+0107, U+0108-&gt;U+0109,<span class="se">\</span>
+        U+0109, U+010A-&gt;U+010B, U+010B, U+010C-&gt;U+010D, U+010D, U+010E-&gt;U+010F, U+010F,<span class="se">\</span>
+        U+0110-&gt;U+0111, U+0111, U+0112-&gt;U+0113, U+0113, U+0114-&gt;U+0115, U+0115, U+0116-&gt;U+0117,<span class="se">\</span>
+        U+0117, U+0118-&gt;U+0119, U+0119, U+011A-&gt;U+011B, U+011B, U+011C-&gt;U+011D, U+011D,<span class="se">\</span>
+        U+011E-&gt;U+011F, U+011F, U+0130-&gt;U+0131, U+0131, U+0132-&gt;U+0133, U+0133, U+0134-&gt;U+0135,<span class="se">\</span>
+        U+0135, U+0136-&gt;U+0137, U+0137, U+0139-&gt;U+013A, U+013A, U+013B-&gt;U+013C, U+013C,<span class="se">\</span>
+        U+013D-&gt;U+013E, U+013E, U+013F-&gt;U+0140, U+0140, U+0141-&gt;U+0142, U+0142, U+0143-&gt;U+0144,<span class="se">\</span>
+        U+0144, U+0145-&gt;U+0146, U+0146, U+0147-&gt;U+0148, U+0148, U+014A-&gt;U+014B, U+014B,<span class="se">\</span>
+        U+014C-&gt;U+014D, U+014D, U+014E-&gt;U+014F, U+014F, U+0150-&gt;U+0151, U+0151, U+0152-&gt;U+0153,<span class="se">\</span>
+        U+0153, U+0154-&gt;U+0155, U+0155, U+0156-&gt;U+0157, U+0157, U+0158-&gt;U+0159, U+0159,<span class="se">\</span>
+        U+015A-&gt;U+015B, U+015B, U+015C-&gt;U+015D, U+015D, U+015E-&gt;U+015F, U+015F, U+0160-&gt;U+0161,<span class="se">\</span>
+        U+0161, U+0162-&gt;U+0163, U+0163, U+0164-&gt;U+0165, U+0165, U+0166-&gt;U+0167, U+0167,<span class="se">\</span>
+        U+0168-&gt;U+0169, U+0169, U+016A-&gt;U+016B, U+016B, U+016C-&gt;U+016D, U+016D, U+016E-&gt;U+016F,<span class="se">\</span>
+        U+016F, U+0170-&gt;U+0171, U+0171, U+0172-&gt;U+0173, U+0173, U+0174-&gt;U+0175, U+0175,<span class="se">\</span>
+        U+0176-&gt;U+0177, U+0177, U+0178-&gt;U+00FF, U+00FF, U+0179-&gt;U+017A, U+017A, U+017B-&gt;U+017C,<span class="se">\</span>
+        U+017C, U+017D-&gt;U+017E, U+017E, U+0410..U+042F-&gt;U+0430..U+044F, U+0430..U+044F,<span class="se">\</span>
+        U+05D0..U+05EA, U+0531..U+0556-&gt;U+0561..U+0586, U+0561..U+0587, U+0621..U+063A, U+01B9,<span class="se">\</span>
+        U+01BF, U+0640..U+064A, U+0660..U+0669, U+066E, U+066F, U+0671..U+06D3, U+06F0..U+06FF,<span class="se">\</span>
+        U+0904..U+0939, U+0958..U+095F, U+0960..U+0963, U+0966..U+096F, U+097B..U+097F,<span class="se">\</span>
+        U+0985..U+09B9, U+09CE, U+09DC..U+09E3, U+09E6..U+09EF, U+0A05..U+0A39, U+0A59..U+0A5E,<span class="se">\</span>
+        U+0A66..U+0A6F, U+0A85..U+0AB9, U+0AE0..U+0AE3, U+0AE6..U+0AEF, U+0B05..U+0B39,<span class="se">\</span>
+        U+0B5C..U+0B61, U+0B66..U+0B6F, U+0B71, U+0B85..U+0BB9, U+0BE6..U+0BF2, U+0C05..U+0C39,<span class="se">\</span>
+        U+0C66..U+0C6F, U+0C85..U+0CB9, U+0CDE..U+0CE3, U+0CE6..U+0CEF, U+0D05..U+0D39, U+0D60,<span class="se">\</span>
+        U+0D61, U+0D66..U+0D6F, U+0D85..U+0DC6, U+1900..U+1938, U+1946..U+194F, U+A800..U+A805,<span class="se">\</span>
+        U+A807..U+A822, U+0386-&gt;U+03B1, U+03AC-&gt;U+03B1, U+0388-&gt;U+03B5, U+03AD-&gt;U+03B5,<span class="se">\</span>
+        U+0389-&gt;U+03B7, U+03AE-&gt;U+03B7, U+038A-&gt;U+03B9, U+0390-&gt;U+03B9, U+03AA-&gt;U+03B9,<span class="se">\</span>
+        U+03AF-&gt;U+03B9, U+03CA-&gt;U+03B9, U+038C-&gt;U+03BF, U+03CC-&gt;U+03BF, U+038E-&gt;U+03C5,<span class="se">\</span>
+        U+03AB-&gt;U+03C5, U+03B0-&gt;U+03C5, U+03CB-&gt;U+03C5, U+03CD-&gt;U+03C5, U+038F-&gt;U+03C9,<span class="se">\</span>
+        U+03CE-&gt;U+03C9, U+03C2-&gt;U+03C3, U+0391..U+03A1-&gt;U+03B1..U+03C1,<span class="se">\</span>
+        U+03A3..U+03A9-&gt;U+03C3..U+03C9, U+03B1..U+03C1, U+03C3..U+03C9, U+0E01..U+0E2E,<span class="se">\</span>
+        U+0E30..U+0E3A, U+0E40..U+0E45, U+0E47, U+0E50..U+0E59, U+A000..U+A48F, U+4E00..U+9FBF,<span class="se">\</span>
+        U+3400..U+4DBF, U+20000..U+2A6DF, U+F900..U+FAFF, U+2F800..U+2FA1F, U+2E80..U+2EFF,<span class="se">\</span>
+        U+2F00..U+2FDF, U+3100..U+312F, U+31A0..U+31BF, U+3040..U+309F, U+30A0..U+30FF,<span class="se">\</span>
+        U+31F0..U+31FF, U+AC00..U+D7AF, U+1100..U+11FF, U+3130..U+318F, U+A000..U+A48F,<span class="se">\</span>
+        U+A490..U+A4CF
+
+        <span class="c">#简单分词，只支持0和1，如果要搜索中文，请指定为1</span>
+        ngram_len <span class="o">=</span> 1
+
+        <span class="c">#需要分词的字符，如果要搜索中文，去掉前面的注释</span>
+        ngram_chars <span class="o">=</span> U+4E00..U+9FBF, U+3400..U+4DBF, U+20000..U+2A6DF, U+F900..U+FAFF,<span class="se">\</span>
+        U+2F800..U+2FA1F, U+2E80..U+2EFF, U+2F00..U+2FDF, U+3100..U+312F, U+31A0..U+31BF,<span class="se">\</span>
+        U+3040..U+309F, U+30A0..U+30FF, U+31F0..U+31FF, U+AC00..U+D7AF, U+1100..U+11FF,<span class="se">\</span>
+        U+3130..U+318F, U+A000..U+A48F, U+A490..U+A4CF,A..Z-&gt;a..z,a..z
+        min_infix_len  <span class="o">=</span> 1
+        min_word_len  <span class="o">=</span> 1
+<span class="o">}</span>
+
+index members_delta : members
+<span class="o">{</span>
+    <span class="nb">source</span>          <span class="o">=</span> members_delta
+    path            <span class="o">=</span> /var/lib/sphinxsearch/data/members_delta
+<span class="o">}</span>
+
+
+indexer
+<span class="o">{</span>
+    mem_limit       <span class="o">=</span> 256M
+<span class="o">}</span>
+
+
+searchd
+<span class="o">{</span>
+    listen              <span class="o">=</span> 9312
+    listen              <span class="o">=</span> 9306:mysql41
+
+    log                 <span class="o">=</span> /var/log/sphinxsearch/searchd.log
+    query_log           <span class="o">=</span> /var/log/sphinxsearch/query.log
+    read_timeout        <span class="o">=</span> 5
+    client_timeout      <span class="o">=</span> 300
+    max_children        <span class="o">=</span> 30
+    pid_file            <span class="o">=</span> /var/run/sphinxsearch/searchd.pid
+    max_matches         <span class="o">=</span> 1000
+    seamless_rotate     <span class="o">=</span> 1
+    preopen_indexes     <span class="o">=</span> 1
+    unlink_old          <span class="o">=</span> 1
+    mva_updates_pool    <span class="o">=</span> 1M
+    max_packet_size     <span class="o">=</span> 8M
+    max_filters         <span class="o">=</span> 256
+    max_filter_values   <span class="o">=</span> 4096
+    max_batch_queries   <span class="o">=</span> 32
+    workers             <span class="o">=</span> threads <span class="c"># for RT to work</span>
+<span class="o">}</span>
+<span class="c"># --eof-- </span>
+</code></pre></div></div>
+
+<p>注意：</p>
+
+<p>　　任何一项配置，如果在新的数据源块中指定了新值，继承的值都将被忽略，即使有多个定义（ multivalue）－－也就是说在一个块中如果某个类型的定义有多个，如果在新块中定义了该类型的一个新值，那么继承来的该类型的整个列表都将被忽略。所以discuz source中指定的 sql_query_pre = SET NAMES utf8对threads source不起作用。</p>
+
+<p>启动：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>searchd
+</code></pre></div></div>
+<p>查看是否启动：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># netstat -anp | grep searchd</span>
+tcp        0      0 0.0.0.0:9306            0.0.0.0:<span class="k">*</span>      LISTEN      12128/searchd   
+tcp        0      0 0.0.0.0:9312            0.0.0.0:<span class="k">*</span>      LISTEN      12128/searchd   
+</code></pre></div></div>
+<p>建立索引：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>indexer <span class="nt">--all</span>
+</code></pre></div></div>
+<p>查询：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ubuntu:/etc/sphinxsearch# search <span class="nt">-i</span> threads <span class="nt">-q</span> 中国
+Sphinx 2.0.4-release <span class="o">(</span>r3135<span class="o">)</span>
+Copyright <span class="o">(</span>c<span class="o">)</span> 2001-2012, Andrew Aksyonoff
+Copyright <span class="o">(</span>c<span class="o">)</span> 2008-2012, Sphinx Technologies Inc <span class="o">(</span>http://sphinxsearch.com<span class="o">)</span>
+
+using config file <span class="s1">'/etc/sphinxsearch/sphinx.conf'</span>...
+index <span class="s1">'threads'</span>: query <span class="s1">'中国 '</span>: returned 1000 matches of 2475 total <span class="k">in </span>0.001 sec
+
+displaying matches:
+1. <span class="nv">document</span><span class="o">=</span>7119603, <span class="nv">weight</span><span class="o">=</span>2585, <span class="nv">tid</span><span class="o">=</span>7119603, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>1946538, <span class="nv">lastpost</span><span class="o">=</span>Sun Jan  5 12:45:44 2014, <span class="nv">special</span><span class="o">=</span>0
+2. <span class="nv">document</span><span class="o">=</span>7261805, <span class="nv">weight</span><span class="o">=</span>2585, <span class="nv">tid</span><span class="o">=</span>7261805, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>24325709, <span class="nv">lastpost</span><span class="o">=</span>Tue Mar  4 12:24:38 2014, <span class="nv">special</span><span class="o">=</span>0
+3. <span class="nv">document</span><span class="o">=</span>7290324, <span class="nv">weight</span><span class="o">=</span>2585, <span class="nv">tid</span><span class="o">=</span>7290324, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>1445813, <span class="nv">lastpost</span><span class="o">=</span>Mon Mar 17 04:01:24 2014, <span class="nv">special</span><span class="o">=</span>0
+4. <span class="nv">document</span><span class="o">=</span>7227195, <span class="nv">weight</span><span class="o">=</span>2579, <span class="nv">tid</span><span class="o">=</span>7227195, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>11733214, <span class="nv">lastpost</span><span class="o">=</span>Sun Mar  9 16:40:53 2014, <span class="nv">special</span><span class="o">=</span>0
+5. <span class="nv">document</span><span class="o">=</span>7290329, <span class="nv">weight</span><span class="o">=</span>2579, <span class="nv">tid</span><span class="o">=</span>7290329, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>1445813, <span class="nv">lastpost</span><span class="o">=</span>Tue Apr  8 10:45:22 2014, <span class="nv">special</span><span class="o">=</span>0
+6. <span class="nv">document</span><span class="o">=</span>7106960, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7106960, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>4805441, <span class="nv">lastpost</span><span class="o">=</span>Mon May  5 10:35:42 2014, <span class="nv">special</span><span class="o">=</span>0
+7. <span class="nv">document</span><span class="o">=</span>7119614, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7119614, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>1946538, <span class="nv">lastpost</span><span class="o">=</span>Sun Jan  5 12:47:58 2014, <span class="nv">special</span><span class="o">=</span>0
+8. <span class="nv">document</span><span class="o">=</span>7126922, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7126922, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>702620, <span class="nv">lastpost</span><span class="o">=</span>Wed Jan  8 12:03:42 2014, <span class="nv">special</span><span class="o">=</span>0
+9. <span class="nv">document</span><span class="o">=</span>7142792, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7142792, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>15085343, <span class="nv">lastpost</span><span class="o">=</span>Wed Feb  5 11:28:42 2014, <span class="nv">special</span><span class="o">=</span>0
+10. <span class="nv">document</span><span class="o">=</span>7149618, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7149618, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>702620, <span class="nv">lastpost</span><span class="o">=</span>Sun Jan 19 16:31:48 2014, <span class="nv">special</span><span class="o">=</span>0
+11. <span class="nv">document</span><span class="o">=</span>7163844, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7163844, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>23516188, <span class="nv">lastpost</span><span class="o">=</span>Sat Jan 18 08:36:57 2014, <span class="nv">special</span><span class="o">=</span>0
+12. <span class="nv">document</span><span class="o">=</span>7184213, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7184213, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>4294967295, <span class="nv">authorid</span><span class="o">=</span>702620, <span class="nv">lastpost</span><span class="o">=</span>Thu Jan 23 20:06:34 2014, <span class="nv">special</span><span class="o">=</span>0
+13. <span class="nv">document</span><span class="o">=</span>7184247, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7184247, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>702620, <span class="nv">lastpost</span><span class="o">=</span>Tue Apr 15 18:21:35 2014, <span class="nv">special</span><span class="o">=</span>0
+14. <span class="nv">document</span><span class="o">=</span>7199964, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7199964, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>702620, <span class="nv">lastpost</span><span class="o">=</span>Mon Feb  3 22:25:35 2014, <span class="nv">special</span><span class="o">=</span>0
+15. <span class="nv">document</span><span class="o">=</span>7202349, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7202349, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>702620, <span class="nv">lastpost</span><span class="o">=</span>Tue Apr 15 12:41:43 2014, <span class="nv">special</span><span class="o">=</span>0
+16. <span class="nv">document</span><span class="o">=</span>7213200, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7213200, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>11734808, <span class="nv">lastpost</span><span class="o">=</span>Sat Apr 12 22:03:55 2014, <span class="nv">special</span><span class="o">=</span>0
+17. <span class="nv">document</span><span class="o">=</span>7226460, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7226460, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>6581011, <span class="nv">lastpost</span><span class="o">=</span>Sun Feb 16 21:02:46 2014, <span class="nv">special</span><span class="o">=</span>0
+18. <span class="nv">document</span><span class="o">=</span>7237943, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7237943, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>3522150, <span class="nv">lastpost</span><span class="o">=</span>Thu Feb 20 19:10:51 2014, <span class="nv">special</span><span class="o">=</span>0
+19. <span class="nv">document</span><span class="o">=</span>7241387, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7241387, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>11733214, <span class="nv">lastpost</span><span class="o">=</span>Sun Mar  9 18:39:46 2014, <span class="nv">special</span><span class="o">=</span>0
+20. <span class="nv">document</span><span class="o">=</span>7244569, <span class="nv">weight</span><span class="o">=</span>2574, <span class="nv">tid</span><span class="o">=</span>7244569, <span class="nv">digest</span><span class="o">=</span>0, <span class="nv">displayorder</span><span class="o">=</span>0, <span class="nv">authorid</span><span class="o">=</span>3066764, <span class="nv">lastpost</span><span class="o">=</span>Sat Apr  5 18:31:09 2014, <span class="nv">special</span><span class="o">=</span>0
+
+words:
+1. <span class="s1">'中'</span>: 13444 documents, 13716 hits
+2. <span class="s1">'国'</span>: 15152 documents, 16196 hits
+</code></pre></div></div>
+<p>连接虚拟mysql</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ubuntu:/etc/sphinxsearch# mysql <span class="nt">-h127</span>.0.0.1 <span class="nt">-P9306</span>
+Welcome to the MariaDB monitor.  Commands end with <span class="p">;</span> or <span class="se">\g</span><span class="nb">.</span>
+Your MySQL connection id is 1
+Server version: 2.0.4-release <span class="o">(</span>r3135<span class="o">)</span>
+
+Copyright <span class="o">(</span>c<span class="o">)</span> 2000, 2014, Oracle, SkySQL Ab and others.
+
+Type <span class="s1">'help;'</span> or <span class="s1">'\h'</span> <span class="k">for </span>help. Type <span class="s1">'\c'</span> to clear the current input statement.
+
+MySQL <span class="o">[(</span>none<span class="o">)]&gt;</span> show tables<span class="p">;</span>
++---------------+-------+
+| Index         | Type  |
++---------------+-------+
+| members       | <span class="nb">local</span> |
+| threads       | <span class="nb">local</span> |
+| threads_delta | <span class="nb">local</span> |
++---------------+-------+
+3 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
+
+MySQL <span class="o">[(</span>none<span class="o">)]&gt;</span> desc threads<span class="p">;</span>
++--------------+-----------+
+| Field        | Type      |
++--------------+-----------+
+| id           | integer   |
+| subject      | field     |
+| tid          | uint      |
+| fid          | uint      |
+| digest       | uint      |
+| displayorder | uint      |
+| dateline     | timestamp |
+| lastpost     | timestamp |
+| recommends   | uint      |
+| replies      | uint      |
++--------------+-----------+
+10 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.02 sec<span class="o">)</span>
+</code></pre></div></div>
+
+<h2 id="参考">参考：</h2>
+
+<p><a href="http://sphinxsearch.com/docs/2.1.8/installing-debian.html">http://sphinxsearch.com/docs/2.1.8/installing-debian.html</a>
+<a href="https://code.google.com/p/sphinxsearch/">https://code.google.com/p/sphinxsearch/</a>
+<a href="https://code.google.com/p/sphinx-for-chinese/">https://code.google.com/p/sphinx-for-chinese/</a>
+<a href="http://www.wubiao.info/292">Sphinx 之 Coreseek、Sphinx-for-chinaese、Sphinx+Scws 评测</a>
+<a href="http://www.rockbb.com/blog/?p=221">中文全文检索Coreseek, Sphinx-for-Chinese, SCWS的使用对比</a>
+<a href="http://hi.baidu.com/gyc800/item/1b359ea3f656893c030a4ddb">Sphinx中文分词详细安装配置及API调用实战手册</a>
+<a href="http://sphinxsearch.com/wiki/doku.php?id=php_api_docs">Sphinx PHP API Documentation</a></p>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+        var gitalk = new Gitalk({
+            id: '/2014/06/25/sphinx-with-discuz/',
+            clientID: 'd2e1cbbd298958076462',
+            clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
+            repo: 'blog-comments',
+            owner: 'xyunsh',
+            admin: ['xyunsh'],
+            labels: ['gitment'],
+            perPage: 50,
+        })
+        gitalk.render('gitalk-container')
+        </script>
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="https://xyunsh.github.io/assets/css/modules/sidebar-search.css">
+<script src="https://xyunsh.github.io/assets/js/simple-jekyll-search.min.js"></script>
+<script src="https://xyunsh.github.io/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'https://xyunsh.github.io/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="https://xyunsh.github.io/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="xyunsh">xyunsh</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/xyunsh/xyunsh.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="https://xyunsh.github.io/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="https://xyunsh.github.io/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="https://xyunsh.github.io/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="https://xyunsh.github.io/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="https://xyunsh.github.io/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="https://xyunsh.github.io/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <div class="tools-wrapper">
+      <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
+    </div>
+    <!-- / footer -->
+    <script src="https://xyunsh.github.io/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="https://xyunsh.github.io/assets/js/geopattern.js"></script>
+    <script src="https://xyunsh.github.io/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="https://xyunsh.github.io/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>

@@ -73,6 +73,13 @@
     } ,
   
     {
+      "title"    : "sphinx with discuz",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/2014/06/25/sphinx-with-discuz/"
+    } ,
+  
+    {
       "title"    : "ssh 免密码登入远程服务器",
       "category" : "Tools",
       
