@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://xyunsh.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xyunsh.github.io/" rel="alternate" type="text/html" /><updated>2018-12-10T18:32:56+08:00</updated><id>https://xyunsh.github.io/feed.xml</id><title type="html">xyunsh</title><subtitle>萧云的个人博客</subtitle><author><name>xyunsh</name></author><entry><title type="html">mac pro 安装 composer 失败</title><link href="https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro/" rel="alternate" type="text/html" title="mac pro 安装 composer 失败" /><published>2014-01-17T00:00:00+08:00</published><updated>2014-01-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro</id><content type="html" xml:base="https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro/">&lt;p&gt;&lt;a href=&quot;http://getcomposer.org/doc/00-intro.md#using-composer&quot;&gt;http://getcomposer.org/doc/00-intro.md#using-composer&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://xyunsh.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xyunsh.github.io/" rel="alternate" type="text/html" /><updated>2018-12-11T16:59:28+08:00</updated><id>https://xyunsh.github.io/feed.xml</id><title type="html">xyunsh</title><subtitle>萧云的个人博客</subtitle><author><name>xyunsh</name></author><entry><title type="html">ssh 免密码登入远程服务器</title><link href="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/" rel="alternate" type="text/html" title="ssh 免密码登入远程服务器" /><published>2014-07-17T00:00:00+08:00</published><updated>2014-07-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password</id><content type="html" xml:base="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/">&lt;p&gt;生成ssh密钥，将公钥上传至远程服务器~/.ssh目录下面（没有的话就建一个）：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa
+scp ~/.ssh/id_rsa.pub root@yourserver.com:/root/.ssh/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;登录到远程服务器，导入公钥到authorized_keys（没有建一个）：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.ssh
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;id_rsa.pub &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; authorized_keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;删除公钥&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;本地配置ssh config&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host server1
+HostName 1.2.3.4
+Port 22722
+User root
+IdentityFile ~/.ssh/id_rsa
+
+Host server2
+HostName 2.3.4.5
+User root
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这样就可以ssh server1,ssh server2登录远程服务器了。&lt;/p&gt;
+
+&lt;h2 id=&quot;参考资料&quot;&gt;参考资料：&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/dudu/archive/2012/12/11/linux-ssh-without-password.html&quot;&gt;http://www.cnblogs.com/dudu/archive/2012/12/11/linux-ssh-without-password.html&lt;/a&gt;
+&lt;a href=&quot;http://dhq.me/use-ssh-config-manage-ssh-session&quot;&gt;http://dhq.me/use-ssh-config-manage-ssh-session&lt;/a&gt;&lt;/p&gt;</content><author><name>xyunsh</name></author><summary type="html">生成ssh密钥，将公钥上传至远程服务器~/.ssh目录下面（没有的话就建一个）：</summary></entry><entry><title type="html">mac pro 安装 composer 失败</title><link href="https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro/" rel="alternate" type="text/html" title="mac pro 安装 composer 失败" /><published>2014-01-17T00:00:00+08:00</published><updated>2014-01-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro</id><content type="html" xml:base="https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro/">&lt;p&gt;&lt;a href=&quot;http://getcomposer.org/doc/00-intro.md#using-composer&quot;&gt;http://getcomposer.org/doc/00-intro.md#using-composer&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install josegonzalez/php/composer
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
