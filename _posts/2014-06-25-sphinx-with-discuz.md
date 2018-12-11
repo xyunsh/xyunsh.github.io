@@ -351,11 +351,10 @@ MySQL [(none)]> desc threads;
 ```
 
 ## 参考：
-
-<http://sphinxsearch.com/docs/2.1.8/installing-debian.html>
-<https://code.google.com/p/sphinxsearch/>
-<https://code.google.com/p/sphinx-for-chinese/>
-[Sphinx 之 Coreseek、Sphinx-for-chinaese、Sphinx+Scws 评测](http://www.wubiao.info/292)
-[中文全文检索Coreseek, Sphinx-for-Chinese, SCWS的使用对比](http://www.rockbb.com/blog/?p=221)
-[Sphinx中文分词详细安装配置及API调用实战手册](http://hi.baidu.com/gyc800/item/1b359ea3f656893c030a4ddb)
-[Sphinx PHP API Documentation](http://sphinxsearch.com/wiki/doku.php?id=php_api_docs)
+* <http://sphinxsearch.com/docs/2.1.8/installing-debian.html>
+* <https://code.google.com/p/sphinxsearch/>
+* <https://code.google.com/p/sphinx-for-chinese/>
+* [Sphinx 之 Coreseek、Sphinx-for-chinaese、Sphinx+Scws 评测](http://www.wubiao.info/292)
+* [中文全文检索Coreseek, Sphinx-for-Chinese, SCWS的使用对比](http://www.rockbb.com/blog/?p=221)
+* [Sphinx中文分词详细安装配置及API调用实战手册](http://hi.baidu.com/gyc800/item/1b359ea3f656893c030a4ddb)
+* [Sphinx PHP API Documentation](http://sphinxsearch.com/wiki/doku.php?id=php_api_docs)
