@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Linux/Unix &mdash; xyunsh</title>
+    <title>ssh 免密码登入远程服务器 &mdash; xyunsh</title>
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/octicons/octicons/octicons.css">
@@ -21,28 +21,28 @@
     
 
     
-    <link rel="canonical" href="https://xyunsh.github.io/wiki/linux/">
+    <link rel="canonical" href="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/">
     <link rel="alternate" type="application/atom+xml" title="xyunsh" href="https://xyunsh.github.io/feed.xml">
     <link rel="shortcut icon" href="https://xyunsh.github.io/favicon.ico">
     
-    <meta property="og:title" content="Linux/Unix">
+    <meta property="og:title" content="ssh 免密码登入远程服务器">
       
-    <meta name="keywords" content="Linux">
-    <meta name="og:keywords" content="Linux">
+    <meta name="keywords" content="ssh">
+    <meta name="og:keywords" content="ssh">
       
-    <meta name="description" content="类 Unix 系统下的一些常用命令和用法。">
-    <meta name="og:description" content="类 Unix 系统下的一些常用命令和用法。">
+    <meta name="description" content="生成ssh密钥，将公钥上传至远程服务器~/.ssh目录下面（没有的话就建一个）：">
+    <meta name="og:description" content="生成ssh密钥，将公钥上传至远程服务器~/.ssh目录下面（没有的话就建一个）：">
       
     
     
         
     
-    <meta property="og:url" content="https://xyunsh.github.io/wiki/linux/">
+    <meta property="og:url" content="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/">
     <meta property="og:site_name" content="xyunsh">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
     
-    <meta property="article:published_time" content="2018-12-11">
+    <meta property="article:published_time" content="2014-07-17">
     
     <script src="https://xyunsh.github.io/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="https://xyunsh.github.io/assets/js/jquery-ui.js"></script>
@@ -74,12 +74,25 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Linux/Unix">
+    <section class="collection-head small geopattern" data-pattern-id="ssh 免密码登入远程服务器">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">Linux/Unix</h1>
+        <h1 class="collection-header">ssh 免密码登入远程服务器</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2014/07/17
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="https://xyunsh.github.io/categories/#Tools" title="Tools">Tools</a>
+          </span>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -90,57 +103,38 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <p>类 Unix 系统下的一些常用命令和用法。</p>
+    <p>生成ssh密钥，将公钥上传至远程服务器~/.ssh目录下面（没有的话就建一个）：</p>
 
-<h2 id="实用命令">实用命令</h2>
-
-<h3 id="fuser">fuser</h3>
-
-<p>查看文件被谁占用。</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fuser <span class="nt">-u</span> .linux.md.swp
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen <span class="nt">-t</span> rsa
+scp ~/.ssh/id_rsa.pub root@yourserver.com:/root/.ssh/
 </code></pre></div></div>
+<p>登录到远程服务器，导入公钥到authorized_keys（没有建一个）：</p>
 
-<h3 id="id">id</h3>
-
-<p>查看当前用户、组 id。</p>
-
-<h3 id="lsof">lsof</h3>
-
-<p>查看打开的文件列表。</p>
-
-<blockquote>
-  <p>An  open  file  may  be  a  regular  file,  a directory, a block special file, a character special file, an executing text reference, a library, a stream or a network file (Internet socket, NFS file or UNIX domain socket.)  A specific file or all the files in a file system may be selected by path.</p>
-</blockquote>
-
-<h4 id="查看网络相关的文件占用">查看网络相关的文件占用</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/.ssh
+<span class="nb">cat </span>id_rsa.pub <span class="o">&gt;&gt;</span> authorized_keys
 </code></pre></div></div>
+<p>删除公钥</p>
 
-<h4 id="查看端口占用">查看端口占用</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span> tcp:5037
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm id_rsa.pub
 </code></pre></div></div>
+<p>本地配置ssh config</p>
 
-<h4 id="查看某个文件被谁占用">查看某个文件被谁占用</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host server1
+HostName 1.2.3.4
+Port 22722
+User root
+IdentityFile ~/.ssh/id_rsa
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof .linux.md.swp
+Host server2
+HostName 2.3.4.5
+User root
 </code></pre></div></div>
+<p>这样就可以ssh server1,ssh server2登录远程服务器了。</p>
 
-<h4 id="查看某个用户占用的文件信息">查看某个用户占用的文件信息</h4>
+<h2 id="参考资料">参考资料：</h2>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-u</span> mazhuang
-</code></pre></div></div>
-
-<p><code class="highlighter-rouge">-u</code> 后面可以跟 uid 或 login name。</p>
-
-<h4 id="查看某个程序占用的文件信息">查看某个程序占用的文件信息</h4>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-c</span> Vim
-</code></pre></div></div>
-
-<p>注意程序名区分大小写。</p>
+<p><a href="http://www.cnblogs.com/dudu/archive/2012/12/11/linux-ssh-without-password.html">http://www.cnblogs.com/dudu/archive/2012/12/11/linux-ssh-without-password.html</a>
+<a href="http://dhq.me/use-ssh-config-manage-ssh-session">http://dhq.me/use-ssh-config-manage-ssh-session</a></p>
 
     </article>
     <div class="share">
@@ -157,7 +151,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/wiki/linux/',
+            id: '/2014/07/17/login-remote-ssh-server-without-passwo',
             clientID: 'd2e1cbbd298958076462',
             clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
             repo: 'blog-comments',
