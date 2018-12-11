@@ -30,8 +30,8 @@
     <meta name="keywords" content="php">
     <meta name="og:keywords" content="php">
       
-    <meta name="description" content="Q &amp; A">
-    <meta name="og:description" content="Q &amp; A">
+    <meta name="description" content="php 几个概念CGI">
+    <meta name="og:description" content="php 几个概念CGI">
       
     
     
@@ -90,7 +90,27 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <h2 id="q--a">Q &amp; A</h2>
+    <h2 id="php-几个概念">php 几个概念</h2>
+<h3 id="cgi">CGI</h3>
+
+<h3 id="fastcgi">FastCGI</h3>
+
+<h3 id="php-cgi">PHP-CGI</h3>
+
+<h3 id="php-fpm-php-fastcgi-process-manager">PHP-FPM (PHP FastCGI Process Manager):</h3>
+<p>安装</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nt">-y</span> install php5-common php5-fpm php5-mysql php5-curl php5-gd php-pear php5-mcrypt php5-memcache php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+</code></pre></div></div>
+<p>重新启动</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> /etc/init.d/php5-fpm restart
+</code></pre></div></div>
+<h3 id="spawn-fcgi">Spawn-FCGI</h3>
+
+<h3 id="参考资料">参考资料</h3>
+<p><a href="http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/">http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/</a>
+<a href="http://ixdba.blog.51cto.com/2895551/806622">http://ixdba.blog.51cto.com/2895551/806622</a></p>
+
+<h2 id="q--a">Q &amp; A</h2>
 
 <h3 id="如何查看-phpini-文件路径">如何查看 php.ini 文件路径？</h3>
 
