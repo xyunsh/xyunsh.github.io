@@ -10,6 +10,23 @@ keywords: Linux
 
 ## 实用命令
 
+### wget 输出内容到console
+```sh
+wget -qO- http://www.baidu.com
+```
+
+### find
+<http://www.cnblogs.com/skynet/archive/2010/12/25/1916873.html>
+```sh
+find . -name .svn|xargs rm -rf
+```
+查找node_modules之外的文件
+```sh
+find . -path ./node_modules -prune -o -type f -name "*.map";
+
+find . -path ./node_modules -prune -o -type f -name "*.map"|xargs rm;//删除文件
+```
+
 ### fuser
 
 查看文件被谁占用。

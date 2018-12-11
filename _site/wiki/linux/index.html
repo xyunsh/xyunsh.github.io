@@ -94,6 +94,20 @@
 
 <h2 id="实用命令">实用命令</h2>
 
+<h3 id="wget-输出内容到console">wget 输出内容到console</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-qO-</span> http://www.baidu.com
+</code></pre></div></div>
+
+<h3 id="find">find</h3>
+<p><a href="http://www.cnblogs.com/skynet/archive/2010/12/25/1916873.html">http://www.cnblogs.com/skynet/archive/2010/12/25/1916873.html</a></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-name</span> .svn|xargs rm <span class="nt">-rf</span>
+</code></pre></div></div>
+<p>查找node_modules之外的文件</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-path</span> ./node_modules <span class="nt">-prune</span> <span class="nt">-o</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="s2">"*.map"</span><span class="p">;</span>
+
+find <span class="nb">.</span> <span class="nt">-path</span> ./node_modules <span class="nt">-prune</span> <span class="nt">-o</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="s2">"*.map"</span>|xargs rm<span class="p">;</span>//删除文件
+</code></pre></div></div>
+
 <h3 id="fuser">fuser</h3>
 
 <p>查看文件被谁占用。</p>

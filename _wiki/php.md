@@ -6,6 +6,28 @@ description: 学习 php 过程中遇到的问题记录。
 keywords: php
 ---
 
+## php 几个概念
+### CGI
+
+### FastCGI
+
+### PHP-CGI
+
+### PHP-FPM (PHP FastCGI Process Manager):
+安装
+```sh
+sudo apt-get -y install php5-common php5-fpm php5-mysql php5-curl php5-gd php-pear php5-mcrypt php5-memcache php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+```
+重新启动
+```sh
+sudo /etc/init.d/php5-fpm restart
+```
+### Spawn-FCGI
+
+### 参考资料
+<http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/>
+<http://ixdba.blog.51cto.com/2895551/806622>
+
 ## Q & A
 
 ### 如何查看 php.ini 文件路径？
