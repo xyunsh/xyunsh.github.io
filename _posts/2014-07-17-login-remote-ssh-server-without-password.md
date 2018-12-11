@@ -42,5 +42,5 @@ User root
 
 ## 参考资料：
 
-<http://www.cnblogs.com/dudu/archive/2012/12/11/linux-ssh-without-password.html>
-<http://dhq.me/use-ssh-config-manage-ssh-session>
+* <http://www.cnblogs.com/dudu/archive/2012/12/11/linux-ssh-without-password.html>
+* <http://dhq.me/use-ssh-config-manage-ssh-session>
