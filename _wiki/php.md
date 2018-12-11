@@ -25,8 +25,8 @@ sudo /etc/init.d/php5-fpm restart
 ### Spawn-FCGI
 
 ### 参考资料
-<http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/>
-<http://ixdba.blog.51cto.com/2895551/806622>
+* <http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/>
+* <http://ixdba.blog.51cto.com/2895551/806622>
 
 ## Q & A
 
