@@ -108,6 +108,13 @@
     } ,
   
     {
+      "title"    : "English",
+      "category" : "Learning",
+      
+      "url"      : "https://xyunsh.github.io/wiki/english/"
+    } ,
+  
+    {
       "title"    : "express",
       "category" : "Web",
       
