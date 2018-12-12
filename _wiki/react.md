@@ -6,6 +6,13 @@ description: 收集React开发资料。
 keywords: React
 ---
 
+- <https://reactjs.org/>
+- <https://github.com/facebook/react>
+
+### nextjs
+- [中文文档](http://nextjs.frontendx.cn/)
+- <https://nextjs.org/>
+
 #### tips
 - [Learning React](https://github.com/petehunt/react-howto/blob/master/README-zh.md)
 - [Redux的全家桶与最佳实践](https://zhuanlan.zhihu.com/p/22405838)
