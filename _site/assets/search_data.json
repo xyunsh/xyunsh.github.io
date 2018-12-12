@@ -67,7 +67,7 @@
   
     {
       "title"    : "mac pro 安装 composer 失败",
-      "category" : "php",
+      "category" : "PHP",
       
       "url"      : "https://xyunsh.github.io/2014/01/17/install-componser-fail-on-mac-pro/"
     } ,
@@ -91,6 +91,13 @@
       "category" : "App",
       
       "url"      : "https://xyunsh.github.io/wiki/android/"
+    } ,
+  
+    {
+      "title"    : "ApiCloud",
+      "category" : "App",
+      
+      "url"      : "https://xyunsh.github.io/wiki/apicloud/"
     } ,
   
     {
@@ -175,6 +182,13 @@
       "category" : "App",
       
       "url"      : "https://xyunsh.github.io/wiki/mini-program/"
+    } ,
+  
+    {
+      "title"    : "Mongodb",
+      "category" : "Database",
+      
+      "url"      : "https://xyunsh.github.io/wiki/mongodb/"
     } ,
   
     {
@@ -266,6 +280,13 @@
       "category" : "Web",
       
       "url"      : "https://xyunsh.github.io/wiki/webtools/"
+    } ,
+  
+    {
+      "title"    : "World Press",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/wiki/worldpress/"
     } 
   
 ]

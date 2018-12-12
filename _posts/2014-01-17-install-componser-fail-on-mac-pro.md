@@ -1,7 +1,7 @@
 ---
 layout: post
 title: mac pro 安装 composer 失败
-categories: php
+categories: PHP
 description: mac pro 安装 composer 失败
 keywords: php, composer
 ---

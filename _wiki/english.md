@@ -12,54 +12,57 @@ keywords: english
 - barren The barren land could produce litte food
 - bump
 - devise
-- exert
-- intrigue
-- oath
-- postpone
+- exert 
+- intrigue The king's younger brother take part in the intrigue to make himself king.
+- oath 
+- postpone The had to postpone their trip because of rain.
 - refuge
 - regain
-- shatter
+- shatter Their hope of finding him alive was shattered
 - tease
 - tilt
-- version
+- version Do you have English version of this book?
 
 ### Part 2
-- absurd
-- alien After ten years his alien speech
-- amiable She is an amiable girl
+- absurd His belief
+- alien After ten years his alien speech was still noticeable.
+- amiable She is an amiable girl and gets along with everyone in the office.
 - ban In most country 
-- figurative
+- figurative "the sweet temper" 
 - genunine
-- hoist
+- hoist They hoist the national flag at six o'clock every morning.
 - incorrect The newspaper gave an incorrect count 
-- massive 
+- massive The house was built on a massive rock.
 - stale
 - thrive Most followers will not thrive without water and sunshine.
+- wholesale
 
 ### Part 3
-- annoy 
+- annoy The baby is olways annoying his sister by pulling her hair. 
 - celebrate
 - diplomat 
-- foresee
+- foresee It is impossible to foresee whether  she'll well enought to 
 - induce We counld'nt induce the old lady travel by air.
 - mobilize
-- precede
+- precede Mr. Eisenhower preceded Mr. Kennedy 
 - predetermine Some people
-- prevail Making 
+- prevail Making resolutions on New Year's Day is custom that still prevails.
 - subtle Her subtle smile make him curious.
 - transact The man transacts many affairs
-- treason 
+- treason Helping the enimies of one's country is an treason 
 - utilize How can we utilize his knowledge and skill to our advantage.
 
 ### Part 4
 - bosom 
-- diploma
-- dramatic
+- diploma When a preson 
+- dramatic The meetting between the mother and her blind son was dramatic. 
 - fume 
 - hurrah "Hurrah!" they shouted as the team scored again.
+- miniature
+- parcel On her birthday her arms were filled with gift parcels.
 - pill
 - racket
-- rhyme
+- rhyme The poet used the word "flight" as rhyme
 - scar
 - sculpture
-- skip When
+- skip When I read a book, I usually skip over the uninsterting part.

@@ -50,6 +50,16 @@ keywords: Javascript
 - [dygraphs](http://dygraphs.com/)
 - [Chart.js](http://www.chartjs.org/)
 
+### mean
+#### mean 存在两个github
+
+- mean.io <https://github.com/linnovate/mean> linnovate公司维护版本，主页：<http://mean.io/>
+- mean.js <https://github.com/meanjs/mean> 原linnovate首席维护人员离开公司后维护版本，主页：<http://meanjs.org/>
+ 
+
+#### 一些资料：
+- [Compare Single Page App Starters](https://docs.google.com/spreadsheets/d/1r8rJy2Q5p5QORYKcye93UECwOlSgFL24c5fyF7dqhaM/edit#gid=1607194899)
+
 ###
 - 获取html根属性
   window.getComputedStyle(document.getElementsByTagName('html')[0])
