@@ -11,7 +11,7 @@ keywords: CSS
 
 ## Demo
 ### 文字带颜色下划线
-<style tyle="css">
+<style type="text/css">
     p.underline { color: #333 }
     p.underline::after { content:""; height: 2px; background-color:#eee; display: block; margin-top: 10px; border-left: solid 80px #ffc100;}
 </style>
@@ -29,7 +29,7 @@ p.underline::after  {
 <p class="underline">文字带颜色下划线</p>
 
 ### 文字两边带线
-<style type="css">
+<style type="text/css">
     p.withline {
         color: #00af98;
         text-align: center;
