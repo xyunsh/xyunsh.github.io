@@ -31,12 +31,8 @@ p.underline::after  {
 ### 文字两边带线
 <style type="text/css">
     p.withline {
-        color: #00af98;
-        text-align: center;
         display: flex;
         align-items: center;
-        padding: 0 180px;
-        margin-top: 30px;
     }
     p.withline::before,
     p.withline::after{    
