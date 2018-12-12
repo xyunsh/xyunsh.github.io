@@ -114,20 +114,48 @@
 </code></pre></div></div>
 <p class="underline">文字带颜色下划线</p>
 
+<h3 id="文字两边带线">文字两边带线</h3>
+<style type="css">
+    p.withline {
+        color: #00af98;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 0 180px;
+        margin-top: 30px;
+    }
+    p.withline::before,
+    p.withline::after, {    
+        content: "";
+        flex: 1;
+        background-color: #00af98;
+        height: 2px;
+        margin: 0 10px;
+    }
+</style>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">p</span><span class="nc">.withline</span> <span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="m">#00af98</span><span class="p">;</span>
+        <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+        <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">180px</span><span class="p">;</span>
+        <span class="nl">margin-top</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nt">p</span><span class="nc">.withline</span><span class="nd">::before</span><span class="o">,</span>
+    <span class="nt">p</span><span class="nc">.withline</span><span class="nd">::after</span><span class="o">,</span> <span class="p">{</span>    
+        <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
+        <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="m">#00af98</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+<p class="withline">文字两边带线</p>
+
 <h2 id="资料">资料</h2>
 <ul>
-  <li><a href="http://www.cnblogs.com/lhb25/p/8-amazing-codepen-demos.html">网页超炫动态效果，HTML5+CSS+JS实现源码</a></li>
-  <li><a href="http://html5index.org/">如果遇到问题，先看看官方文档如何解释，The HTML 5 JavaScript API </a></li>
-  <li><a href="http://www.cnblogs.com/lhb25/p/best-jquery-plugins-of-2013.html">期待已久的2013年度最佳 jQuery 插件揭晓，有源码 </a></li>
-  <li><a href="http://www.uisdc.com/website-font-rendering-process">网站字体渲染！聊聊各浏览器下字体排版一致的问题 </a></li>
-  <li><a href="http://jianshu.io/p/5b7b09b93875">优秀且免费的照片库 </a></li>
-  <li><a href="http://www.cnblogs.com/Wayou/p/goodui.html">非常好的界面设计分享，用户体验是润物无声地留住用户必由之路 </a></li>
-  <li><a href="http://www.cnblogs.com/lhb25/p/10-best-node-js-mvc-frameworks.html">10个最好的 Node.js MVC 框架 </a></li>
-  <li><a href="http://www.gbtags.com/gb/share/2818.htm?utm_source=tuicool">20个HTML5/CSS3超酷应用，含源码 </a></li>
-  <li><a href="http://www.lembed.com/5-javascript-debugging-tips-youll-start-using-today/">5个JavaScript调试技巧 </a></li>
-  <li><a href="http://nqdeng.github.io/7-days-nodejs/#1">NodeJS教程 </a></li>
-  <li><a href="http://www.cnblogs.com/lhb25/p/20-excellent-open-source-tools.html">Web 项目可能会用到的20款优秀的开源工具 </a></li>
-  <li>[35个让人惊讶的 CSS3 动画效果演示 ](http://www.cnblogs.com/lhb25/archive/2011/11/22/best-awesome-css3-animation-demos.html]</li>
+  <li><a href="https://mdbootstrap.com/">https://mdbootstrap.com/</a></li>
 </ul>
 
 <h2 id="tips">Tips</h2>
