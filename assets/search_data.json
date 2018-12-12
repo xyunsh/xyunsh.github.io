@@ -73,6 +73,13 @@
     } ,
   
     {
+      "title"    : "CodeIgniter + smarty 实现widget功能",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/2014/02/25/widget-with-codeigniter-and-smarty/"
+    } ,
+  
+    {
       "title"    : "sphinx with discuz",
       "category" : "Web",
       
