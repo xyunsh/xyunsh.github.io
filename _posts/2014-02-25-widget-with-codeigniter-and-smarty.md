@@ -10,10 +10,10 @@ keywords: CodeIgniter, Smarty
 
 譬如，我们的页面中可以这样写：
 
-```html
-    \{\{extends file='_layout.html'\}\} 
+```
+    {{extends file='_layout.html'}} 
 
-    \{\{block name='content'\}\}
+    {{block name='content'}}
 
     <!--content-->
     <div>
@@ -26,7 +26,7 @@ keywords: CodeIgniter, Smarty
     </div>
     <!--/content-->
 
-    \{\{/block\}\}
+    {{/block}}
 ```
 
 {{widgets path='widgets/news'}}表示调用widgets Controller 的news action，最终输出的html嵌入这里。
