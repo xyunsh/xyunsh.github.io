@@ -39,7 +39,7 @@ p.underline::after  {
         margin-top: 30px;
     }
     p.withline::before,
-    p.withline::after, {    
+    p.withline::after{    
         content: "";
         flex: 1;
         background-color: #00af98;
