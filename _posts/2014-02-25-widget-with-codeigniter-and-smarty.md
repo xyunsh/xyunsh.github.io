@@ -11,7 +11,7 @@ keywords: CodeIgniter, Smarty
 譬如，我们的页面中可以这样写：
 
 ```html
-    {{extends file='_layout.html'}} 
+    \{\{extends file='_layout.html'\}\} 
 
     {{block name='content'}}
 
