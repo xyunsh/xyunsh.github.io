@@ -29,7 +29,7 @@ keywords: CodeIgniter, Smarty
     { {/block} }
 ```
 
-{{widgets path='widgets/news'}}表示调用widgets Controller 的news action，最终输出的html嵌入这里。
+{ {widgets path='widgets/news'} }表示调用widgets Controller 的news action，最终输出的html嵌入这里。
 
 需要实现该功能，可以借助smarty 的function plugin，创建一个 function.widgets.php
 
