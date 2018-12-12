@@ -61,3 +61,9 @@ JSON 编码解码器。
   ```sh
   helloworld
   ```
+
+### 参考资料 
+
+- [Python在线教程，大名鼎鼎的Learn Python The Hard Way, 3rd Edition]( http://learnpythonthehardway.org/book/)
+- [有效提高自己的方式莫过于学习优秀的项目，2013年最受欢迎的Python项目](http://pythontip.sinaapp.com/blog/post/9826/)
+- [Python开发常用工具](http://blog.jobbole.com/58226/)

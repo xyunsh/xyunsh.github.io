@@ -28,6 +28,15 @@ sudo /etc/init.d/php5-fpm restart
 * <http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/>
 * <http://ixdba.blog.51cto.com/2895551/806622>
 
+### smarty 3 + codeigniter 2 + hmvc
+
+* <https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc/src/fecd39ccdf56?at=default>
+* <http://ilikekillnerds.com/2010/11/using-smarty-3-in-codeigniter-2-a-really-tiny-ci-library/>
+* <https://github.com/Vheissu/Ci-Smarty>
+
+### PHP加速器
+* <http://www.vpser.net/opt/apc-eaccelerator-xcache.html>
+
 ## Q & A
 
 ### 如何查看 php.ini 文件路径？
