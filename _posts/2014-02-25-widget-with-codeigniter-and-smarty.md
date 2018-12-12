@@ -10,23 +10,23 @@ keywords: CodeIgniter, Smarty
 
 譬如，我们的页面中可以这样写：
 
-```php
-{{extends file='_layout.html'}} 
+```html
+    {{extends file='_layout.html'}} 
 
-{{block name='content'}}
+    {{block name='content'}}
 
-<!--content-->
-<div>
+    <!--content-->
     <div>
-        {{widgets path='widgets/carousel'}}
-        {{widgets path='widgets/news'}}
+        <div>
+            {{widgets path='widgets/carousel'}}
+            {{widgets path='widgets/news'}}
+        </div>
+        {{widgets path='widgets/hots'}}
+        {{widgets path='widgets/tops'}}
     </div>
-    {{widgets path='widgets/hots'}}
-    {{widgets path='widgets/tops'}}
-</div>
-<!--/content-->
+    <!--/content-->
 
-{{/block}}
+    {{/block}}
 ```
 
 {{widgets path='widgets/news'}}表示调用widgets Controller 的news action，最终输出的html嵌入这里。
