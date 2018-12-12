@@ -84,3 +84,38 @@ Sublime Text 3非常实用，但是想要用好，一些快捷键不可或缺，
 - Ctrl+K+B 开启/关闭侧边栏。
 - F11 全屏模式
 - Shift+F11 免打扰模式
+
+# sublime text 3 上安装xdebug
+安装完成之后启动xdebug，缺省设置下会显示warning等信息，很不方便。
+
+可以参考
+
+<https://github.com/martomo/SublimeTextXdebug/blob/master/Xdebug.sublime-settings>
+
+屏蔽相关信息：
+```sh
+{
+     // Break on exceptions, suspend execution
+    // when the exception name matches an entry in this list value.
+    "break_on_exception": [
+        // E_ERROR, E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR
+        "Fatal error",
+        // E_RECOVERABLE_ERROR (since PHP 5.2.0)
+        "Catchable fatal error",
+        // E_WARNING, E_CORE_WARNING, E_COMPILE_WARNING, E_USER_WARNING
+        //"Warning",
+        // E_PARSE
+        "Parse error",
+        // E_NOTICE, E_USER_NOTICE
+        //"Notice",
+        // E_STRICT
+        //"Strict standards",
+        // E_DEPRECATED, E_USER_DEPRECATED (since PHP 5.3.0)
+        //"Deprecated",
+        // 0
+        "Xdebug",
+        // default
+        "Unknown error"
+    ]
+}
+```
