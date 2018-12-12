@@ -6,6 +6,10 @@ description: 收集javascript开发资料。
 keywords: Javascript
 ---
 
+### nextjs
+- [中文文档](http://nextjs.frontendx.cn/)
+- <https://nextjs.org/>
+
 ### books
 - [JS 函数式编程指南](https://www.gitbook.com/book/llh911001/mostly-adequate-guide-chinese/details)
 - [Redux-saga 中文文档](http://leonshi.com/redux-saga-in-chinese/index.html)
