@@ -192,6 +192,13 @@
     } ,
   
     {
+      "title"    : "nginx",
+      "category" : "Tools",
+      
+      "url"      : "https://xyunsh.github.io/wiki/nginx/"
+    } ,
+  
+    {
       "title"    : "OneNote",
       "category" : "Tools",
       
