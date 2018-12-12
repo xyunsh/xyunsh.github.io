@@ -114,7 +114,7 @@
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    \{\{extends file='_layout.html'\}\} 
 
-    
+    \{\{block name='content'\}\}
 
     <span class="c">&lt;!--content--&gt;</span>
     <span class="nt">&lt;div&gt;</span>
@@ -127,7 +127,7 @@
     <span class="nt">&lt;/div&gt;</span>
     <span class="c">&lt;!--/content--&gt;</span>
 
-    
+    \{\{/block\}\}
 </code></pre></div></div>
 
 <p>表示调用widgets Controller 的news action，最终输出的html嵌入这里。</p>
