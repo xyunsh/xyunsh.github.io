@@ -30,8 +30,8 @@
     <meta name="keywords" content="Web, CSS, Media Query">
     <meta name="og:keywords" content="Web, CSS, Media Query">
       
-    <meta name="description" content="几个概念  css media query经常采用 max">
-    <meta name="og:description" content="几个概念  css media query经常采用 max">
+    <meta name="description" content="css media query经常采用 min-width min-device-width来适配屏幕大小.">
+    <meta name="og:description" content="css media query经常采用 min-width min-device-width来适配屏幕大小.">
       
     
     
@@ -108,9 +108,11 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <h3 id="几个概念">几个概念</h3>
+    <p>css media query经常采用 min-width min-device-width来适配屏幕大小.</p>
+
+<h3 id="几个概念">几个概念</h3>
 <ul>
-  <li>css media query经常采用 max</li>
+  <li>viewport</li>
 </ul>
 
 <h3 id="iphone-手机的分辨率相关参数">iphone 手机的分辨率相关参数</h3>
@@ -169,7 +171,7 @@
       <td style="text-align: center">5.8</td>
     </tr>
     <tr>
-      <td style="text-align: center">iPhone Xs</td>
+      <td style="text-align: center">iPhone Xr</td>
       <td style="text-align: center">414x896</td>
       <td style="text-align: center">828x1792</td>
       <td style="text-align: center"> </td>
@@ -184,6 +186,9 @@
     </tr>
   </tbody>
 </table>
+
+<p>参考:
+<img src="https://file.kangzubin.com/blog/static/20180919/iPhone-Resolutions.png" alt="iPhone Resolutions" /></p>
 
 <h3 id="max-width-min-width--max-device-width-min-device-width">max-width min-width &amp; max-device-width min-device-width</h3>
 
@@ -205,32 +210,12 @@
 
 <p>采用浏览器默认设置时:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">机型</th>
-      <th style="text-align: center">width</th>
-      <th style="text-align: center">device-width</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">iPhone 6,6s,7,8</td>
-      <td style="text-align: center">980</td>
-      <td style="text-align: center">375</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">iPhone 6+,6s+,7+,8+</td>
-      <td style="text-align: center">980</td>
-      <td style="text-align: center">414</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">iPhone X, Xs</td>
-      <td style="text-align: center">980</td>
-      <td style="text-align: center">375</td>
-    </tr>
-  </tbody>
-</table>
+<p>|           机型                |   width       |   device-width    |
+|:—————————-:|:————-:|:—————–:|
+|   iPhone 6,6s,7,8             |   980         |   375             |
+|   iPhone 6+,6s+,7+,8+         |   980         |   414             |
+|   iPhone X, Xs                |   980         |   375             |
+可以看出width几乎都是980, 而device-width=设备的Points</p>
 
 <p>我们设置</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1"</span><span class="nt">&gt;</span>
@@ -263,6 +248,8 @@
     </tr>
   </tbody>
 </table>
+
+<p>因为设置了viewport的width=device-width, 所以二者一致了.</p>
 
 <h3 id="参考资料">参考资料</h3>
 <ul>
