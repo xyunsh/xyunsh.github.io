@@ -24,7 +24,7 @@ css media query经常采用 min-width min-device-width来适配屏幕大小.
 |      iPhone Xr               |      414x896      |      828x1792                |                           |           6.1                |
 |      iPhone Xs Max           |      414x896      |      1242x2688               |                           |           6.5                |
 
-参考:
+参考:<https://kangzubin.com/iphone-resolutions/#group-1>
 ![iPhone Resolutions](https://file.kangzubin.com/blog/static/20180919/iPhone-Resolutions.png)
 
 
@@ -57,6 +57,7 @@ MediaQueryList {media: "(min-device-width: 375px)", matches: true, onchange: nu
 |   iPhone 6,6s,7,8             |   980         |   375             |
 |   iPhone 6+,6s+,7+,8+         |   980         |   414             |
 |   iPhone X, Xs                |   980         |   375             |
+
 可以看出width几乎都是980, 而device-width=设备的Points
 
 我们设置 
@@ -124,7 +125,3 @@ html {
 
 ```
 其他各种尺寸按照px/100来设置rem.
-
-
-### 参考资料
-- <https://kangzubin.com/iphone-resolutions/#group-1>
