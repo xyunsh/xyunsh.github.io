@@ -30,8 +30,8 @@
     <meta name="keywords" content="Web, CSS, Media Query">
     <meta name="og:keywords" content="Web, CSS, Media Query">
       
-    <meta name="description" content="iphone 手机分辨率">
-    <meta name="og:description" content="iphone 手机分辨率">
+    <meta name="description" content="几个概念  css media query经常采用 max">
+    <meta name="og:description" content="几个概念  css media query经常采用 max">
       
     
     
@@ -108,7 +108,12 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <h2 id="iphone-手机分辨率">iphone 手机分辨率</h2>
+    <h3 id="几个概念">几个概念</h3>
+<ul>
+  <li>css media query经常采用 max</li>
+</ul>
+
+<h3 id="iphone-手机的分辨率相关参数">iphone 手机的分辨率相关参数</h3>
 
 <table>
   <thead>
@@ -179,6 +184,90 @@
     </tr>
   </tbody>
 </table>
+
+<h3 id="max-width-min-width--max-device-width-min-device-width">max-width min-width &amp; max-device-width min-device-width</h3>
+
+<h4 id="min-width">min-width</h4>
+
+<p>当width(min-width和max-width对应的width是什么?)大于375px的时候, html的font-size被设置为50px.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">375px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>我们看看min-width和min-device-width的关系. 通过window.matchMedia, 可以测试相关参数是多少</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s2">"(min-device-width:375px)"</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MediaQueryList <span class="o">{</span>media: <span class="s2">"(min-device-width: 375px)"</span>, matches: <span class="nb">true</span>, onchange: null<span class="o">}</span>
+</code></pre></div></div>
+
+<p>采用浏览器默认设置时:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">机型</th>
+      <th style="text-align: center">width</th>
+      <th style="text-align: center">device-width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">iPhone 6,6s,7,8</td>
+      <td style="text-align: center">980</td>
+      <td style="text-align: center">375</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">iPhone 6+,6s+,7+,8+</td>
+      <td style="text-align: center">980</td>
+      <td style="text-align: center">414</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">iPhone X, Xs</td>
+      <td style="text-align: center">980</td>
+      <td style="text-align: center">375</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>我们设置</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+<p>看看只有什么变化:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">机型</th>
+      <th style="text-align: center">width</th>
+      <th style="text-align: center">device-width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">iPhone 6,6s,7,8</td>
+      <td style="text-align: center">375</td>
+      <td style="text-align: center">375</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">iPhone 6+,6s+,7+,8+</td>
+      <td style="text-align: center">414</td>
+      <td style="text-align: center">414</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">iPhone X, Xs</td>
+      <td style="text-align: center">375</td>
+      <td style="text-align: center">375</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="参考资料">参考资料</h3>
+<ul>
+  <li><a href="https://kangzubin.com/iphone-resolutions/#group-1">https://kangzubin.com/iphone-resolutions/#group-1</a></li>
+</ul>
 
     </article>
     <div class="share">
