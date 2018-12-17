@@ -5,10 +5,10 @@ categories: [Web,CSS]
 description: Web
 keywords: Web, CSS, Media Query
 ---
+css media query经常采用 min-width min-device-width来适配屏幕大小.
 
 ### 几个概念
-- 
-css media query经常采用 max
+- viewport  
 
 
 ### iphone 手机的分辨率相关参数
@@ -21,8 +21,12 @@ css media query经常采用 max
 |      iPhone 6,6s,7,8         |      375x667      |      750x1334                |                           |           4.7                |
 |      iPhone 6+,6s+,7+,8+     |      414x736      |      1242x2208               |           1080x1920       |           5.5                |
 |      iPhone X, Xs            |      375x812      |      1125x2436               |                           |           5.8                |
-|      iPhone Xs               |      414x896      |      828x1792                |                           |           6.1                |
+|      iPhone Xr               |      414x896      |      828x1792                |                           |           6.1                |
 |      iPhone Xs Max           |      414x896      |      1242x2688               |                           |           6.5                |
+
+参考:
+![iPhone Resolutions](https://file.kangzubin.com/blog/static/20180919/iPhone-Resolutions.png)
+
 
 
 ### max-width min-width & max-device-width min-device-width
@@ -53,6 +57,7 @@ MediaQueryList {media: "(min-device-width: 375px)", matches: true, onchange: nu
 |   iPhone 6,6s,7,8             |   980         |   375             |
 |   iPhone 6+,6s+,7+,8+         |   980         |   414             |
 |   iPhone X, Xs                |   980         |   375             |
+可以看出width几乎都是980, 而device-width=设备的Points
 
 我们设置 
 ```html
@@ -65,6 +70,8 @@ MediaQueryList {media: "(min-device-width: 375px)", matches: true, onchange: nu
 |   iPhone 6,6s,7,8             |   375         |   375             |
 |   iPhone 6+,6s+,7+,8+         |   414         |   414             |
 |   iPhone X, Xs                |   375         |   375             |
+
+因为设置了viewport的width=device-width, 所以二者一致了.
 
 ### 参考资料
 - <https://kangzubin.com/iphone-resolutions/#group-1>
