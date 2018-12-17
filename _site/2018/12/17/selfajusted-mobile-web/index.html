@@ -113,6 +113,10 @@
 <h3 id="几个概念">几个概念</h3>
 <ul>
   <li>viewport</li>
+  <li>width: viewport width</li>
+  <li>height: viewport height</li>
+  <li>device width</li>
+  <li>device height</li>
 </ul>
 
 <h3 id="iphone-手机的分辨率相关参数">iphone 手机的分辨率相关参数</h3>
@@ -323,6 +327,35 @@
 
 </code></pre></div></div>
 <p>其他各种尺寸按照px/100来设置rem.</p>
+
+<h3 id="对于pc网站">对于pc网站</h3>
+<p>参考 <a href="http://www.cnblogs.com/polk6/p/5051935.html">http://www.cnblogs.com/polk6/p/5051935.html</a></p>
+<h4 id="屏幕信息">屏幕信息</h4>
+<ul>
+  <li>screen.height ：屏幕高度。</li>
+  <li>screen.width ：屏幕宽度。</li>
+  <li>screen.availHeight ：屏幕可用高度。即屏幕高度减去上下任务栏后的高度，可表示为软件最大化时的高度。</li>
+  <li>screen.availWidth ：屏幕可用宽度。即屏幕宽度减去左右任务栏后的宽度，可表示为软件最大化时的宽度。
+任务栏高/宽度 ：可通过屏幕高/宽度 减去 屏幕可用高/宽度得出。如：任务栏高度 = screen.height - screen.availHeight</li>
+</ul>
+
+<h4 id="浏览器信息">浏览器信息</h4>
+<ul>
+  <li>window.outerHeight ：浏览器高度。</li>
+  <li>window.outerWidth ：浏览器宽度。</li>
+  <li>window.innerHeight ：浏览器内页面可用高度；此高度包含了水平滚动条的高度(若存在)。可表示为浏览器当前高度去除浏览器边框、工具条后的高度。</li>
+  <li>window.innerWidth ：浏览器内页面可用宽度；此宽度包含了垂直滚动条的宽度(若存在)。可表示为浏览器当前宽度去除浏览器边框后的宽度。
+工具栏高/宽度 ：包含了地址栏、书签栏、浏览器边框等范围。如：高度，可通过浏览器高度 - 页面可用高度得出，即：window.outerHeight - window.innerHeight。</li>
+</ul>
+
+<h4 id="页面信息">页面信息</h4>
+<ul>
+  <li>body.offsetHeight ：body总高度。</li>
+  <li>body.offsetWidth ：body总宽度。</li>
+  <li>body.clientHeight ：body展示的高度；表示body在浏览器内显示的区域高度。</li>
+  <li>body.clientWidth ：body展示的宽度；表示body在浏览器内显示的区域宽度。
+滚动条高度/宽度 ：如高度，可通过浏览器内页面可用高度 - body展示高度得出，即window.innerHeight - body.clientHeight</li>
+</ul>
 
     </article>
     <div class="share">

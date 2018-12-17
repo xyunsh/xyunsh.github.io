@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://xyunsh.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xyunsh.github.io/" rel="alternate" type="text/html" /><updated>2018-12-17T15:54:13+08:00</updated><id>https://xyunsh.github.io/feed.xml</id><title type="html">xyunsh</title><subtitle>萧云的个人博客</subtitle><author><name>xyunsh</name></author><entry><title type="html">自适应手机屏幕分辨率</title><link href="https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web/" rel="alternate" type="text/html" title="自适应手机屏幕分辨率" /><published>2018-12-17T00:00:00+08:00</published><updated>2018-12-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web/">&lt;p&gt;css media query经常采用 min-width min-device-width来适配屏幕大小.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://xyunsh.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xyunsh.github.io/" rel="alternate" type="text/html" /><updated>2018-12-17T16:05:56+08:00</updated><id>https://xyunsh.github.io/feed.xml</id><title type="html">xyunsh</title><subtitle>萧云的个人博客</subtitle><author><name>xyunsh</name></author><entry><title type="html">自适应手机屏幕分辨率</title><link href="https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web/" rel="alternate" type="text/html" title="自适应手机屏幕分辨率" /><published>2018-12-17T00:00:00+08:00</published><updated>2018-12-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web/">&lt;p&gt;css media query经常采用 min-width min-device-width来适配屏幕大小.&lt;/p&gt;
 
 &lt;h3 id=&quot;几个概念&quot;&gt;几个概念&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;viewport&lt;/li&gt;
+  &lt;li&gt;width: viewport width&lt;/li&gt;
+  &lt;li&gt;height: viewport height&lt;/li&gt;
+  &lt;li&gt;device width&lt;/li&gt;
+  &lt;li&gt;device height&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;iphone-手机的分辨率相关参数&quot;&gt;iphone 手机的分辨率相关参数&lt;/h3&gt;
@@ -212,7 +216,36 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;其他各种尺寸按照px/100来设置rem.&lt;/p&gt;</content><author><name>xyunsh</name></author><summary type="html">css media query经常采用 min-width min-device-width来适配屏幕大小.</summary></entry><entry><title type="html">react Admin管理系统</title><link href="https://xyunsh.github.io/2018/12/13/react-admin/" rel="alternate" type="text/html" title="react Admin管理系统" /><published>2018-12-13T00:00:00+08:00</published><updated>2018-12-13T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/13/react-admin</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/13/react-admin/"></content><author><name>xyunsh</name></author><summary type="html"></summary></entry><entry><title type="html">ssh 免密码登入远程服务器</title><link href="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/" rel="alternate" type="text/html" title="ssh 免密码登入远程服务器" /><published>2014-07-17T00:00:00+08:00</published><updated>2014-07-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password</id><content type="html" xml:base="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/">&lt;p&gt;生成ssh密钥，将公钥上传至远程服务器~/.ssh目录下面（没有的话就建一个）：&lt;/p&gt;
+&lt;p&gt;其他各种尺寸按照px/100来设置rem.&lt;/p&gt;
+
+&lt;h3 id=&quot;对于pc网站&quot;&gt;对于pc网站&lt;/h3&gt;
+&lt;p&gt;参考 &lt;a href=&quot;http://www.cnblogs.com/polk6/p/5051935.html&quot;&gt;http://www.cnblogs.com/polk6/p/5051935.html&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;屏幕信息&quot;&gt;屏幕信息&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;screen.height ：屏幕高度。&lt;/li&gt;
+  &lt;li&gt;screen.width ：屏幕宽度。&lt;/li&gt;
+  &lt;li&gt;screen.availHeight ：屏幕可用高度。即屏幕高度减去上下任务栏后的高度，可表示为软件最大化时的高度。&lt;/li&gt;
+  &lt;li&gt;screen.availWidth ：屏幕可用宽度。即屏幕宽度减去左右任务栏后的宽度，可表示为软件最大化时的宽度。
+任务栏高/宽度 ：可通过屏幕高/宽度 减去 屏幕可用高/宽度得出。如：任务栏高度 = screen.height - screen.availHeight&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;浏览器信息&quot;&gt;浏览器信息&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;window.outerHeight ：浏览器高度。&lt;/li&gt;
+  &lt;li&gt;window.outerWidth ：浏览器宽度。&lt;/li&gt;
+  &lt;li&gt;window.innerHeight ：浏览器内页面可用高度；此高度包含了水平滚动条的高度(若存在)。可表示为浏览器当前高度去除浏览器边框、工具条后的高度。&lt;/li&gt;
+  &lt;li&gt;window.innerWidth ：浏览器内页面可用宽度；此宽度包含了垂直滚动条的宽度(若存在)。可表示为浏览器当前宽度去除浏览器边框后的宽度。
+工具栏高/宽度 ：包含了地址栏、书签栏、浏览器边框等范围。如：高度，可通过浏览器高度 - 页面可用高度得出，即：window.outerHeight - window.innerHeight。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;页面信息&quot;&gt;页面信息&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;body.offsetHeight ：body总高度。&lt;/li&gt;
+  &lt;li&gt;body.offsetWidth ：body总宽度。&lt;/li&gt;
+  &lt;li&gt;body.clientHeight ：body展示的高度；表示body在浏览器内显示的区域高度。&lt;/li&gt;
+  &lt;li&gt;body.clientWidth ：body展示的宽度；表示body在浏览器内显示的区域宽度。
+滚动条高度/宽度 ：如高度，可通过浏览器内页面可用高度 - body展示高度得出，即window.innerHeight - body.clientHeight&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>xyunsh</name></author><summary type="html">css media query经常采用 min-width min-device-width来适配屏幕大小.</summary></entry><entry><title type="html">react Admin管理系统</title><link href="https://xyunsh.github.io/2018/12/13/react-admin/" rel="alternate" type="text/html" title="react Admin管理系统" /><published>2018-12-13T00:00:00+08:00</published><updated>2018-12-13T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/13/react-admin</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/13/react-admin/"></content><author><name>xyunsh</name></author><summary type="html"></summary></entry><entry><title type="html">ssh 免密码登入远程服务器</title><link href="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/" rel="alternate" type="text/html" title="ssh 免密码登入远程服务器" /><published>2014-07-17T00:00:00+08:00</published><updated>2014-07-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password</id><content type="html" xml:base="https://xyunsh.github.io/2014/07/17/login-remote-ssh-server-without-password/">&lt;p&gt;生成ssh密钥，将公钥上传至远程服务器~/.ssh目录下面（没有的话就建一个）：&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa
 scp ~/.ssh/id_rsa.pub root@yourserver.com:/root/.ssh/
