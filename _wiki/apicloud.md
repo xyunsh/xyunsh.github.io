@@ -2,8 +2,8 @@
 layout: wiki
 title: ApiCloud
 categories: App
-description: ApiCloud资料
-keywords: ApiCloud
+description: APICloud资料
+keywords: APICloud
 ---
 
 ## mac上配置adb以及sublime

@@ -32,3 +32,6 @@ keywords: web
 ### beyond compare
 此破解方法是无限永久试用方法：
 rm "/Users/$(whoami)/Library/Application Support/Beyond Compare/registry.dat"
+
+### ssh映射远程目录
+https://github.com/libfuse/sshfs

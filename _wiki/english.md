@@ -66,3 +66,51 @@ keywords: english
 - scar
 - sculpture
 - skip When I read a book, I usually skip over the uninsterting part.
+
+
+## Lession 22
+### Part 1
+- discipline
+- interpret
+- lounge
+- secure
+- siege
+- strive
+- vocation
+
+### Part 2
+- amiable
+- capture
+- congregate
+- cowardly
+- feeble
+- identicial
+- perpetual
+- twilight
+- unfair
+- vacant
+- varacity
+### Part 3
+- applause
+- brutal
+- defiance
+- demonstrate
+- eloquence
+- exclusive
+- initiative
+- reluctant
+- risky
+- terminate
+- typify
+### Part 4
+- adapt
+- clash
+- compromise
+- era
+- gulp
+- proprietor
+- revise
+- superstition
+- tract
+- wail
+- wither
