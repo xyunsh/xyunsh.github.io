@@ -73,5 +73,58 @@ MediaQueryList {media: "(min-device-width: 375px)", matches: true, onchange: nu
 
 因为设置了viewport的width=device-width, 所以二者一致了.
 
+所以,当我们采用750宽的设计稿进行css编写的时候, 我们可以采用设置html的font-size为 100*width/750 px, 这样设计稿上的1px对应0.01rem. (为什么我们不能直接设置html的font-size为width/750呢? 因为浏览器限制了font-size的最小值12px)
+
+我们可以设置如下css:
+
+```css
+
+
+html {
+    margin: 0 auto;
+    font-size: 50px; /*100*375/750*/
+}
+
+@media screen and (min-width:320px) {
+    html {
+        font-size: 42px; /* 100*320/750 */
+    }
+}
+
+@media screen and (min-width:375px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width:414px) {
+    html {
+        font-size: 55px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    html {
+        font-size: 80px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    html {
+        font-size: 102px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    html {
+        font-size: 136px;
+        width:1024px;
+    }
+}
+
+```
+其他各种尺寸按照px/100来设置rem.
+
+
 ### 参考资料
 - <https://kangzubin.com/iphone-resolutions/#group-1>
