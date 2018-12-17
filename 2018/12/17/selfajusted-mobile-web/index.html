@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>rxjs &mdash; xyunsh</title>
+    <title>自适应手机屏幕分辨率 &mdash; xyunsh</title>
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/octicons/octicons/octicons.css">
@@ -21,23 +21,23 @@
     
 
     
-    <link rel="canonical" href="https://xyunsh.github.io/wiki/rx/">
+    <link rel="canonical" href="https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web/">
     <link rel="alternate" type="application/atom+xml" title="xyunsh" href="https://xyunsh.github.io/feed.xml">
     <link rel="shortcut icon" href="https://xyunsh.github.io/favicon.ico">
     
-    <meta property="og:title" content="rxjs">
+    <meta property="og:title" content="自适应手机屏幕分辨率">
       
-    <meta name="keywords" content="rxjs">
-    <meta name="og:keywords" content="rxjs">
+    <meta name="keywords" content="Web, CSS, Media Query">
+    <meta name="og:keywords" content="Web, CSS, Media Query">
       
-    <meta name="description" content="###  redux-observable  RxJS  RxJS 教程  rxjs简单入门">
-    <meta name="og:description" content="###  redux-observable  RxJS  RxJS 教程  rxjs简单入门">
+    <meta name="description" content="iphone 手机分辨率|———-机型—————|—–Points—–|—–Rendered Pixels——–|—–Physical Pixels—–|—–Physical Device——–||—–iPhone 2G,3G,3GS——-|—–320x480—–|—–320x480—————|————————-|———-3.5—————||——iPhone 4,4s———–|—–320x480—–|—–640x960—————|————————-|———-3.5—————||—–iPhone 5,5s,5c,SE——|—–320x568—–|—–640x1136—————|————————-|———-4—————||—–iPhone 6,6s,7,8——–|—–375x667—–|—–750x1334————–|————————-|———-4.7—————||—–iPhone 6+,6s+,7+,8+—-|—–414x736—–|—–1242x2208————-|———-1080x1920——-|———-5.5—————||—–iPhone X, Xs———-|—–375x812—–|—–1125x2436—————|————————-|———-5.8—————||—–iPhone Xs————–|—–414x896—-|—–828x1792—————|————————-|———-6.1—————||—–iPhone Xs Max———-|—–414x896—–|—–1242x2688————-|————————-|———-6.5—————|">
+    <meta name="og:description" content="iphone 手机分辨率|———-机型—————|—–Points—–|—–Rendered Pixels——–|—–Physical Pixels—–|—–Physical Device——–||—–iPhone 2G,3G,3GS——-|—–320x480—–|—–320x480—————|————————-|———-3.5—————||——iPhone 4,4s———–|—–320x480—–|—–640x960—————|————————-|———-3.5—————||—–iPhone 5,5s,5c,SE——|—–320x568—–|—–640x1136—————|————————-|———-4—————||—–iPhone 6,6s,7,8——–|—–375x667—–|—–750x1334————–|————————-|———-4.7—————||—–iPhone 6+,6s+,7+,8+—-|—–414x736—–|—–1242x2208————-|———-1080x1920——-|———-5.5—————||—–iPhone X, Xs———-|—–375x812—–|—–1125x2436—————|————————-|———-5.8—————||—–iPhone Xs————–|—–414x896—-|—–828x1792—————|————————-|———-6.1—————||—–iPhone Xs Max———-|—–414x896—–|—–1242x2688————-|————————-|———-6.5—————|">
       
     
     
         
     
-    <meta property="og:url" content="https://xyunsh.github.io/wiki/rx/">
+    <meta property="og:url" content="https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web/">
     <meta property="og:site_name" content="xyunsh">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
@@ -74,12 +74,30 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="rxjs">
+    <section class="collection-head small geopattern" data-pattern-id="自适应手机屏幕分辨率">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">rxjs</h1>
+        <h1 class="collection-header">自适应手机屏幕分辨率</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2018/12/17
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="https://xyunsh.github.io/categories/#Web" title="Web">Web</a>
+          </span>
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="https://xyunsh.github.io/categories/#CSS" title="CSS">CSS</a>
+          </span>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -90,14 +108,16 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <p>###</p>
-<ul>
-  <li><a href="https://redux-observable.js.org/">redux-observable</a></li>
-  <li><a href="https://github.com/ReactiveX/RxJS">RxJS</a></li>
-  <li><a href="https://segmentfault.com/a/1190000004293922">RxJS 教程</a></li>
-  <li><a href="https://yq.aliyun.com/articles/65027">rxjs简单入门</a></li>
-</ul>
-
+    <h2 id="iphone-手机分辨率">iphone 手机分辨率</h2>
+<p>|———-机型—————|—–Points—–|—–Rendered Pixels——–|—–Physical Pixels—–|—–Physical Device——–|
+|—–iPhone 2G,3G,3GS——-|—–320x480—–|—–320x480—————|————————-|———-3.5—————|
+|——iPhone 4,4s———–|—–320x480—–|—–640x960—————|————————-|———-3.5—————|
+|—–iPhone 5,5s,5c,SE——|—–320x568—–|—–640x1136—————|————————-|———-4—————|
+|—–iPhone 6,6s,7,8——–|—–375x667—–|—–750x1334————–|————————-|———-4.7—————|
+|—–iPhone 6+,6s+,7+,8+—-|—–414x736—–|—–1242x2208————-|———-1080x1920——-|———-5.5—————|
+|—–iPhone X, Xs———-|—–375x812—–|—–1125x2436—————|————————-|———-5.8—————|
+|—–iPhone Xs————–|—–414x896—-|—–828x1792—————|————————-|———-6.1—————|
+|—–iPhone Xs Max———-|—–414x896—–|—–1242x2688————-|————————-|———-6.5—————|</p>
 
     </article>
     <div class="share">
@@ -114,7 +134,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/wiki/rx/',
+            id: '/2018/12/17/selfajusted-mobile-web/',
             clientID: 'd2e1cbbd298958076462',
             clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
             repo: 'blog-comments',
