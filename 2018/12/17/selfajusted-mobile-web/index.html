@@ -251,6 +251,57 @@
 
 <p>因为设置了viewport的width=device-width, 所以二者一致了.</p>
 
+<p>所以,当我们采用750宽的设计稿进行css编写的时候, 我们可以采用设置html的font-size为 100*width/750 px, 这样设计稿上的1px对应0.01rem. (为什么我们不能直接设置html的font-size为width/750呢? 因为浏览器限制了font-size的最小值12px)</p>
+
+<p>我们可以设置如下css:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+<span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span> <span class="c">/*100*375/750*/</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">320px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">42px</span><span class="p">;</span> <span class="c">/* 100*320/750 */</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">375px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">414px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">55px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">600px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">80px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">102px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span><span class="m">1024px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">136px</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span><span class="m">1024px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>其他各种尺寸按照px/100来设置rem.</p>
+
 <h3 id="参考资料">参考资料</h3>
 <ul>
   <li><a href="https://kangzubin.com/iphone-resolutions/#group-1">https://kangzubin.com/iphone-resolutions/#group-1</a></li>
