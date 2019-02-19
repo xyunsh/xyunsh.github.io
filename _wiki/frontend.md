@@ -6,6 +6,9 @@ description: 收集前端开发资料。
 keywords: frontend, 前端
 ---
 
+### 
+- [给2019前端的5个建议](https://zhuanlan.zhihu.com/p/55357377)
+
 ### 图标
 - [阿里巴巴矢量图标库]()
 - <https://icomoon.io/>

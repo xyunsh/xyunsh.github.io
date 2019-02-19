@@ -14,6 +14,8 @@ css media query经常采用 min-width min-device-width来适配屏幕大小.
 - device width
 - device height
 
+[width versus device-width](http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml)
+
 
 ### iphone 手机的分辨率相关参数
 
