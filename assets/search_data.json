@@ -63,6 +63,8 @@
   
   
   
+  
+  
 
   
     {
@@ -104,7 +106,14 @@
       "title"    : "自适应手机屏幕分辨率",
       "category" : "Web",
       
-      "url"      : "https://xyunsh.github.io/2018/12/17/selfajusted-mobile-web/"
+      "url"      : "https://xyunsh.github.io/2018/12/17/adaptive-design-mobile-web/"
+    } ,
+  
+    {
+      "title"    : "react特性",
+      "category" : "Web",
+      
+      "url"      : "https://xyunsh.github.io/2018/12/21/react-fatures/"
     } ,
   
     {
@@ -137,7 +146,7 @@
   
     {
       "title"    : "English",
-      "category" : "Learning",
+      "category" : "Learn",
       
       "url"      : "https://xyunsh.github.io/wiki/english/"
     } ,
