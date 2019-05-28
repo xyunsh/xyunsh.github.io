@@ -6,6 +6,9 @@ description: 学习 php 过程中遇到的问题记录。
 keywords: php
 ---
 
+## php 安装
+- [在 Ubuntu/Debian 下安装 PHP7.2](https://www.centos.bz/2017/12/%E5%9C%A8-ubuntu-debian-%E4%B8%8B%E5%AE%89%E8%A3%85-php7-2/)
+
 ## php 几个概念
 ### CGI
 
