@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>CSS &mdash; xyunsh</title>
+    <title>node & mysql中的时间函数 &mdash; xyunsh</title>
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="https://xyunsh.github.io/assets/vendor/octicons/octicons/octicons.css">
@@ -21,28 +21,28 @@
     
 
     
-    <link rel="canonical" href="https://xyunsh.github.io/wiki/css/">
+    <link rel="canonical" href="https://xyunsh.github.io/2019/03/20/time-in-node-and-mysql/">
     <link rel="alternate" type="application/atom+xml" title="xyunsh" href="https://xyunsh.github.io/feed.xml">
     <link rel="shortcut icon" href="https://xyunsh.github.io/favicon.ico">
     
-    <meta property="og:title" content="CSS">
+    <meta property="og:title" content="node & mysql中的时间函数">
       
-    <meta name="keywords" content="CSS">
-    <meta name="og:keywords" content="CSS">
+    <meta name="keywords" content="MySQL, Node">
+    <meta name="og:keywords" content="MySQL, Node">
       
-    <meta name="description" content="flex布局  http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">
-    <meta name="og:description" content="flex布局  http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">
+    <meta name="description" content="UTC 时间  ISO_8601时间格式标准譬如 2019-05-19T16:00:00.000ZT代表UTC时间, Z代表4位数字格式时间偏移量,不写的时候默认不偏移.  上面的时间表示UTC时区2019年5月19日下午16点, 也就是北京时间2019年5月20日凌晨0点.">
+    <meta name="og:description" content="UTC 时间  ISO_8601时间格式标准譬如 2019-05-19T16:00:00.000ZT代表UTC时间, Z代表4位数字格式时间偏移量,不写的时候默认不偏移.  上面的时间表示UTC时区2019年5月19日下午16点, 也就是北京时间2019年5月20日凌晨0点.">
       
     
     
         
     
-    <meta property="og:url" content="https://xyunsh.github.io/wiki/css/">
+    <meta property="og:url" content="https://xyunsh.github.io/2019/03/20/time-in-node-and-mysql/">
     <meta property="og:site_name" content="xyunsh">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
     
-    <meta property="article:published_time" content="2019-05-28">
+    <meta property="article:published_time" content="2019-03-20">
     
     <script src="https://xyunsh.github.io/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="https://xyunsh.github.io/assets/js/jquery-ui.js"></script>
@@ -74,12 +74,30 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="CSS">
+    <section class="collection-head small geopattern" data-pattern-id="node & mysql中的时">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">CSS</h1>
+        <h1 class="collection-header">node & mysql中的时间函数</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2019/03/20
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="https://xyunsh.github.io/categories/#MySQL" title="MySQL">MySQL</a>
+          </span>
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="https://xyunsh.github.io/categories/#Node" title="Node">Node</a>
+          </span>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -90,88 +108,35 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <h2 id="flex布局">flex布局</h2>
+    <h3 id="utc-时间">UTC 时间</h3>
 <ul>
-  <li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></li>
+  <li><a href="https://zh.wikipedia.org/wiki/ISO_8601">ISO_8601时间格式标准</a>
+譬如 2019-05-19T16:00:00.000Z
+T代表UTC时间, Z代表4位数字格式时间偏移量,不写的时候默认不偏移.  上面的时间表示UTC时区2019年5月19日下午16点, 也就是北京时间2019年5月20日凌晨0点.</li>
 </ul>
 
-<h2 id="demo">Demo</h2>
-<h3 id="文字带颜色下划线">文字带颜色下划线</h3>
-<style type="text/css">
-    p.underline { color: #333 }
-    p.underline::after { content:""; height: 2px; background-color:#eee; display: block; margin-top: 10px; border-left: solid 80px #ffc100;}
-</style>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span><span class="nc">.underline</span>         <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span> <span class="p">}</span>
-<span class="nt">p</span><span class="nc">.underline</span><span class="nd">::after</span>  <span class="p">{</span> 
-    <span class="nl">content</span><span class="p">:</span><span class="s1">""</span><span class="p">;</span> 
-    <span class="nl">height</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span> 
-    <span class="nl">background-color</span><span class="p">:</span><span class="m">#eee</span><span class="p">;</span> 
-    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span> 
-    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span> 
-    <span class="nl">border-left</span><span class="p">:</span> <span class="nb">solid</span> <span class="m">80px</span> <span class="m">#ffc100</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p class="underline">文字带颜色下划线</p>
-
-<h3 id="文字两边带线">文字两边带线</h3>
-<style type="text/css">
-    p.withline {
-        display: flex;
-        align-items: center;
-    }
-    p.withline::before,
-    p.withline::after{    
-        content: "";
-        flex: 1;
-        background-color: #00af98;
-        height: 2px;
-        margin: 0 10px;
-    }
-</style>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">p</span><span class="nc">.withline</span> <span class="p">{</span>
-        <span class="nl">color</span><span class="p">:</span> <span class="m">#00af98</span><span class="p">;</span>
-        <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-        <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
-        <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-        <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">180px</span><span class="p">;</span>
-        <span class="nl">margin-top</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nt">p</span><span class="nc">.withline</span><span class="nd">::before</span><span class="o">,</span>
-    <span class="nt">p</span><span class="nc">.withline</span><span class="nd">::after</span><span class="o">,</span> <span class="p">{</span>    
-        <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
-        <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
-        <span class="nl">background-color</span><span class="p">:</span> <span class="m">#00af98</span><span class="p">;</span>
-        <span class="nl">height</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
-        <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre></div></div>
-<p class="withline">文字两边带线</p>
-
-<h2 id="资料">资料</h2>
+<h3 id="unix时间戳">unix时间戳</h3>
 <ul>
-  <li><a href="https://mdbootstrap.com/">https://mdbootstrap.com/</a></li>
+  <li>Unix timestamp 定义为从格林威治时间1970年01月01日00时00分00秒起至现在的总秒数.UNIX时间戳的0按照ISO 8601规范为 ：1970-01-01T00:00:00Z.</li>
 </ul>
 
-<h2 id="tips">Tips</h2>
+<h3 id="node时间">node时间</h3>
+<p>在node中, 使用Date.now() 获取unix时间戳.</p>
+
+<h3 id="momentjs">momentjs</h3>
 <ul>
-  <li>
-    <p><a href="http://stackoverflow.com/questions/5256533/a-space-between-inline-block-list-items">A Space Between Inline-block list items</a></p>
+  <li>获取星期第一天, 周日为星期第一天
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> moment().startOf("week")
+</code></pre></div>    </div>
+    <p>如果需要周一为第一天则使用</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>moment().startOf("isoWeek")
+</code></pre></div>    </div>
   </li>
-  <li>
-    <p>字体对应</p>
-    <ul>
-      <li>100 - Thin</li>
-      <li>200 - Extra Light (Ultra Light)</li>
-      <li>300 - Light</li>
-      <li>400 - Regular (Normal、Book、Roman)</li>
-      <li>500 - Medium</li>
-      <li>600 - Semi Bold (Demi Bold)</li>
-      <li>700 - Bold</li>
-      <li>800 - Extra Bold (Ultra Bold)</li>
-      <li>900 - Black (Heavy)</li>
-    </ul>
+  <li>获取当月的天数
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>moment().daysInMonth();
+moment("2012-02", "YYYY-MM").daysInMonth() // 29 
+moment("2012-01", "YYYY-MM").daysInMonth() // 31 
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -190,7 +155,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
-            id: '/wiki/css/',
+            id: '/2019/03/20/time-in-node-and-mysql/',
             clientID: 'd2e1cbbd298958076462',
             clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
             repo: 'blog-comments',

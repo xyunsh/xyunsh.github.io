@@ -1,7 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://xyunsh.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xyunsh.github.io/" rel="alternate" type="text/html" /><updated>2019-02-19T15:47:30+08:00</updated><id>https://xyunsh.github.io/feed.xml</id><title type="html">xyunsh</title><subtitle>萧云的个人博客</subtitle><author><name>xyunsh</name></author><entry><title type="html">react特性</title><link href="https://xyunsh.github.io/2018/12/21/react-fatures/" rel="alternate" type="text/html" title="react特性" /><published>2018-12-21T00:00:00+08:00</published><updated>2018-12-21T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/21/react-fatures</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/21/react-fatures/">&lt;h3 id=&quot;hoots&quot;&gt;Hoots&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://xyunsh.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xyunsh.github.io/" rel="alternate" type="text/html" /><updated>2019-05-28T18:40:53+08:00</updated><id>https://xyunsh.github.io/feed.xml</id><title type="html">xyunsh</title><subtitle>萧云的个人博客</subtitle><author><name>xyunsh</name></author><entry><title type="html">node &amp;amp; mysql中的时间函数</title><link href="https://xyunsh.github.io/2019/03/20/time-in-node-and-mysql/" rel="alternate" type="text/html" title="node &amp; mysql中的时间函数" /><published>2019-03-20T00:00:00+08:00</published><updated>2019-03-20T00:00:00+08:00</updated><id>https://xyunsh.github.io/2019/03/20/time-in-node-and-mysql</id><content type="html" xml:base="https://xyunsh.github.io/2019/03/20/time-in-node-and-mysql/">&lt;h3 id=&quot;utc-时间&quot;&gt;UTC 时间&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/ISO_8601&quot;&gt;ISO_8601时间格式标准&lt;/a&gt;
+譬如 2019-05-19T16:00:00.000Z
+T代表UTC时间, Z代表4位数字格式时间偏移量,不写的时候默认不偏移.  上面的时间表示UTC时区2019年5月19日下午16点, 也就是北京时间2019年5月20日凌晨0点.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;unix时间戳&quot;&gt;unix时间戳&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unix timestamp 定义为从格林威治时间1970年01月01日00时00分00秒起至现在的总秒数.UNIX时间戳的0按照ISO 8601规范为 ：1970-01-01T00:00:00Z.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;node时间&quot;&gt;node时间&lt;/h3&gt;
+&lt;p&gt;在node中, 使用Date.now() 获取unix时间戳.&lt;/p&gt;
+
+&lt;h3 id=&quot;momentjs&quot;&gt;momentjs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;获取星期第一天, 周日为星期第一天
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; moment().startOf(&quot;week&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;如果需要周一为第一天则使用&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;moment().startOf(&quot;isoWeek&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;获取当月的天数
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;moment().daysInMonth();
+moment(&quot;2012-02&quot;, &quot;YYYY-MM&quot;).daysInMonth() // 29 
+moment(&quot;2012-01&quot;, &quot;YYYY-MM&quot;).daysInMonth() // 31 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>xyunsh</name></author><summary type="html">UTC 时间 ISO_8601时间格式标准 譬如 2019-05-19T16:00:00.000Z T代表UTC时间, Z代表4位数字格式时间偏移量,不写的时候默认不偏移. 上面的时间表示UTC时区2019年5月19日下午16点, 也就是北京时间2019年5月20日凌晨0点.</summary></entry><entry><title type="html">react特性</title><link href="https://xyunsh.github.io/2018/12/21/react-fatures/" rel="alternate" type="text/html" title="react特性" /><published>2018-12-21T00:00:00+08:00</published><updated>2018-12-21T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/21/react-fatures</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/21/react-fatures/">&lt;h3 id=&quot;hooks&quot;&gt;Hooks&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/50597236&quot;&gt;一篇看懂 React Hooks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>xyunsh</name></author><summary type="html">Hoots 一篇看懂 React Hooks</summary></entry><entry><title type="html">自适应手机屏幕分辨率</title><link href="https://xyunsh.github.io/2018/12/17/adaptive-design-mobile-web/" rel="alternate" type="text/html" title="自适应手机屏幕分辨率" /><published>2018-12-17T00:00:00+08:00</published><updated>2018-12-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/17/adaptive-design-mobile-web</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/17/adaptive-design-mobile-web/">&lt;p&gt;css media query经常采用 min-width min-device-width来适配屏幕大小.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>xyunsh</name></author><summary type="html">Hooks 一篇看懂 React Hooks</summary></entry><entry><title type="html">自适应手机屏幕分辨率</title><link href="https://xyunsh.github.io/2018/12/17/adaptive-design-mobile-web/" rel="alternate" type="text/html" title="自适应手机屏幕分辨率" /><published>2018-12-17T00:00:00+08:00</published><updated>2018-12-17T00:00:00+08:00</updated><id>https://xyunsh.github.io/2018/12/17/adaptive-design-mobile-web</id><content type="html" xml:base="https://xyunsh.github.io/2018/12/17/adaptive-design-mobile-web/">&lt;p&gt;css media query经常采用 min-width min-device-width来适配屏幕大小.&lt;/p&gt;
 
 &lt;h3 id=&quot;几个概念&quot;&gt;几个概念&lt;/h3&gt;
 &lt;ul&gt;
